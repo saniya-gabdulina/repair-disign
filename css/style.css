@@ -318,7 +318,6 @@ template {
   display: none; }
 
 .button {
-  padding: 11px 24px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
@@ -386,11 +385,14 @@ body {
   text-transform: uppercase; }
 
 .nav__item {
+  font-size: 1rem;
+  line-height: 1;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 2.85rem;
-  transition: color 0.2s; }
+  margin-right: 2.65rem;
+  transition: color 0.2s;
+  font-weight: lighter; }
   .nav__item:hover {
     color: #E3B873; }
 
@@ -431,10 +433,10 @@ body {
     margin: 0;
     margin-bottom: 3.40rem; }
   .hero__button {
-    margin-right: 20px;
+    margin-right: 18px;
     height: 3.62rem;
-    width: 14.35rem;
-    letter-spacing: 0.01px; }
+    width: 14.69rem;
+    letter-spacing: 0.31px; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -497,19 +499,11 @@ body {
 
 @media screen and (max-width: 1270px) {
   html {
-    font-size: 12px; }
-  .nav__item {
-    margin-right: 1rem; } }
+    font-size: 12px; } }
 
 @media screen and (max-width: 992px) {
   .nav {
     display: none; }
-  .hero__instagram {
-    display: none; }
-  .hero__content {
-    margin-left: 0; } }
-
-@media screen and (max-width: 992px) {
   .contacts__phone {
     margin-right: 0;
     color: #fff;
@@ -518,6 +512,10 @@ body {
     display: none; }
   .title {
     font-size: 1.64rem; }
+  .hero__instagram {
+    display: none; }
+  .hero__content {
+    margin-left: 0; }
   .hero__scroll-down {
     display: none; }
   .hero__content {
