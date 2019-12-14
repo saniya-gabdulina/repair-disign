@@ -4,6 +4,17 @@
     .nav
         &__item
             margin-right: 1rem
+@media screen and ( max-width: 1024px )
+    .nav
+       display: none
+    .contacts
+        &__phone
+            margin-right: 2.5rem
+            color: $primary
+            text-decoration: none
+    .card
+        &__title
+            min-height: 36px
 @media screen and ( max-width: 992px )
     .nav
        display: none
@@ -32,10 +43,6 @@
             display: block
             min-width: 22.86rem
             margin-bottom: 1.85rem
-@media screen and (max-width: 890px)
-    .card
-        &__title
-            min-height: 36px
 @media screen and ( max-width: 760px )
     .row
         flex-direction: column

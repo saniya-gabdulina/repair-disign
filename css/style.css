@@ -414,6 +414,10 @@ img {
 .contacts__phone {
   margin-right: 45px; }
 
+.contacts__button {
+  width: 161px;
+  height: 37px; }
+
 .hero {
   position: relative;
   display: flex;
@@ -567,6 +571,16 @@ img {
   .nav__item {
     margin-right: 1rem; } }
 
+@media screen and (max-width: 1024px) {
+  .nav {
+    display: none; }
+  .contacts__phone {
+    margin-right: 2.5rem;
+    color: #E3B873;
+    text-decoration: none; }
+  .card__title {
+    min-height: 36px; } }
+
 @media screen and (max-width: 992px) {
   .nav {
     display: none; }
@@ -593,10 +607,6 @@ img {
     display: block;
     min-width: 22.86rem;
     margin-bottom: 1.85rem; } }
-
-@media screen and (max-width: 890px) {
-  .card__title {
-    min-height: 36px; } }
 
 @media screen and (max-width: 760px) {
   .row {
