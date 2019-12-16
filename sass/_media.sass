@@ -4,7 +4,9 @@
     .nav
         &__item
             margin-right: 1rem
-@media screen and ( max-width: 1024px )
+    .section
+        font-weight: normal
+@media screen and ( max-width: 1090px )
     .nav
        display: none
     .contacts
@@ -14,7 +16,13 @@
             text-decoration: none
     .card
         &__title
+            font-size: 15px
             min-height: 36px
+        &__pricetag
+            font-size: 1rem
+            max-width: 228px
+            max-height: 54px
+            padding: 1rem 2.7rem
 @media screen and ( max-width: 992px )
     .nav
        display: none
@@ -43,6 +51,15 @@
             display: block
             min-width: 22.86rem
             margin-bottom: 1.85rem
+
+@media screen and ( max-width: 840px )
+    .card
+        &__pricetag
+            font-size: 1rem
+            max-width: 228px
+            max-height: 54px
+            padding: 1rem 2.7rem
+
 @media screen and ( max-width: 760px )
     .row
         flex-direction: column
@@ -86,10 +103,45 @@
             display: block
             min-width: 22.86rem
             margin-bottom: 1.85rem
-@media screen and ( max-height: 520px )
+@media screen and ( max-width: 520px )
     .hero
         &__scroll-down
             display: none
+@media screen and ( max-width: 375px )
+    .hero 
+        &__button
+            min-width: 23rem
+    .section
+        &-title
+            &__heading
+                font-weight: normal
+            &__description
+                font-size: 1rem
+                font-weight: normal
+    .card
+        &__title
+            font-weight: normal
+        &__pricetag
+            min-width: 13.6rem
+            min-height: 2.85rem
+
+@media screen and ( max-width: 320px )
+    .hero 
+        
+        &__button
+            min-width: 19rem
+    .section
+        font-weight: normal
+        &-title
+            &__description
+                font-size: 1rem
+                
+    .card
+        &__title
+            font-weight: normal
+        &__pricetag
+            min-width: 13.6rem
+            min-height: 2.85rem
             
 
     

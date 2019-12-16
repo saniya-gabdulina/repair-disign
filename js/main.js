@@ -1,3 +1,4 @@
+/*
 document.addEventListener("DOMContentLoaded", function(event) {
     const modal = document.querySelector('.modal');
     const modalBtn = document.querySelectorAll('[data-toggle=modal]');
@@ -11,4 +12,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     closeBtn.addEventListener('click', switchModal);
 
+});
+*/
+
+$(document).ready(function () {
+    var modal = $('.modal'),
+        modalBtn = $('[data-toggle=modal]'),
+        closeBtn = $('.modal__close');
+    console.log(modal);
+    console.log(modalBtn);
+    console.log(closeBtn);
 });
