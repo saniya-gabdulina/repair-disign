@@ -698,19 +698,22 @@ img {
 
 .swiper-slide {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding-bottom: 2rem; }
+  .swiper-slider-image {
+    margin-top: -13rem; }
   .swiper-slide__text {
     flex-basis: 50%;
-    margin-bottom: 2.42rem;
-    padding-bottom: 2rem; }
+    text-align: left;
+    line-height: 1.5; }
   .swiper-slide__heading {
     font-size: 1.285rem;
     line-height: 1.78rem;
     font-family: 'Yeseva One', cursive;
     color: #E3B873;
     text-transform: uppercase;
-    margin-bottom: 0.64rem;
-    font-weight: normal; }
+    font-weight: normal;
+    margin-bottom: 0.64rem; }
 
 .swiper-pagination-bullet {
   background-color: rgba(255, 255, 255, 0.3); }
@@ -808,9 +811,17 @@ img {
       color: #fff;
       margin-bottom: 2.78rem; }
     .design__card {
-      margin-bottom: 5.7rem; } }
+      margin-bottom: 5.7rem; }
+  .swiper-slider-image {
+    margin-top: 0; }
+  .mobile-order-top {
+    order: -1; }
+  .col-50 {
+    width: 100%; } }
 
 @media screen and (max-width: 570px) {
+  .section-title__text {
+    margin-bottom: 2.57rem; }
   .section-title__description {
     max-width: 21.86rem; }
   .contacts__phone {
@@ -831,7 +842,15 @@ img {
   .hero__button {
     display: block;
     min-width: 22.86rem;
-    margin-bottom: 1.85rem; } }
+    margin-bottom: 1.85rem; }
+  .swiper-slider-image {
+    margin-top: 0; }
+  .swiper-slide__value {
+    margin-bottom: 0; }
+  .mobile-order-top {
+    order: -1; }
+  .col-50 {
+    width: 100%; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
@@ -839,7 +858,25 @@ img {
 
 @media screen and (max-width: 520px) {
   .hero__scroll-down {
-    display: none; } }
+    display: none; }
+  .col-50 {
+    width: 100%; }
+  .section-title {
+    font-weight: normal; }
+    .section-title__heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.57rem;
+      letter-spacing: -0.07rem; }
+    .section-title__text {
+      display: block;
+      text-align: center;
+      font-size: 1rem; }
+    .section-title__description {
+      font-size: 1rem; }
+    .section-title__word::after {
+      display: none; } }
 
 @media screen and (max-width: 375px) {
   .hero__button {
@@ -858,10 +895,6 @@ img {
 @media screen and (max-width: 320px) {
   .hero__button {
     min-width: 19rem; }
-  .section {
-    font-weight: normal; }
-    .section-title__description {
-      font-size: 1rem; }
   .card__title {
     font-weight: normal; }
   .card__pricetag {
