@@ -20,7 +20,7 @@ $(document).ready(function () {
         modalBtn = $('[data-toggle=modal]'),
         closeBtn = $('.modal__close');
   
-    modalBtn.on('click', function () {
+    modalBtn.click(function () {
         modal.toggleClass('modal--visible');
     });
     closeBtn.on('click', function () {
@@ -48,13 +48,10 @@ $(document).ready(function () {
 
     new WOW().init();
     
-    console.log($('.types').offset());
-    console.log($('.types').scrollTop());
-    $(document).on('scroll' , function() {
-        var BlockScrollTop = $('.types').scrollTop(),
-            BlockOffsetTop = $('.types').offset();
-        if (BlockOffsetTop > BlockScrollTop) {
-            console.log('Fire');
+    $(document).scroll(function() {
+        console.log($('.types .section-title__heading').offset());
+        if (($(document).scrollTop() + $(window).height()) > $('.types .section-title__heading').offset().top) {
+            $('.types .section-title__heading').addClass('myAnimation');
         }
     })
 });
