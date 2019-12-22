@@ -26,13 +26,12 @@
     font-size: 1.285rem
     color: $light
     padding: 0.5rem 0
-    &--light
-        &::placeholder
-        color: $light
+    &::placeholder
+        color: $dark
 .policy
     &__checkbox
         opacity: 0
-        visibility: hidden
+        display: none
         &:checked +
             .policy__label
                 &::before

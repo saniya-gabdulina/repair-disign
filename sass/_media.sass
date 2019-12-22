@@ -1,4 +1,4 @@
-@media screen and ( max-width: 1270px )
+@media screen and ( max-width: 1440px )
     html
         font-size: 14px
     .nav
@@ -59,7 +59,23 @@
   
     .mobile-order-top
         order: 0
-  
+
+@media screen and ( max-width: 870px )
+    .container
+        width: 100%
+        padding-left: 17px
+        padding-right: 17px
+    .control
+        &__video
+           
+        &__form
+            width: 50rem
+        &__text
+            font-size: 1rem
+    .video
+        &__play
+            width: 63px
+        
 @media screen and ( max-width: 840px )
     .card
         &__pricetag
@@ -100,10 +116,33 @@
         order: -1
     .col-50
         width: 100%
+    .control
+        background-color: $dark
+        color: $light
+        padding: 0
+        &__section-title
+            padding-top: 60px
+        &__form
+            width: 50%
+            flex-direction: column
+        &__input-group
+            margin-bottom: 63px
+        &__button
+            width: 340px
+            height: 51px
+            transform: translatey(44px)
+        &__policy
+            width: 285.62px
+            height: 18px
+            transform: translatey(-103px)
+            margin-top: 0
+            &-label
+                justify-content: flex-start
 @media screen and ( max-width: 570px )
     .section
         &-title
             display: flex
+            flex-direction: column
             &__text
                 margin-bottom: 2.57rem
                 font-size: 1rem
@@ -145,6 +184,11 @@
         order: -1
     .col-50
         width: 100%
+    .control
+        &__form
+            margin-left: 98px
+            margin-right: 154px
+   
 @media screen and ( max-height: 520px )
     .hero
         &__scroll-down
@@ -178,6 +222,17 @@
             &__word
                 &::after
                     display: none
+    .control
+        &__form
+            width: 100%
+            margin: auto
+            justify-content: center
+        &__button
+            width: 90%
+@media screen and ( max-width: 425px )
+    .control
+        &__button
+            width: 100%
 @media screen and ( max-width: 375px )
     .hero 
         &__button
@@ -195,19 +250,20 @@
         &__pricetag
             min-width: 13.6rem
             min-height: 2.85rem
-
 @media screen and ( max-width: 320px )
     .hero 
         
         &__button
             min-width: 19rem
-   
     .card
         &__title
             font-weight: normal
         &__pricetag
             min-width: 13.6rem
             min-height: 2.85rem
+    .control
+        &__form
+            width: 100%
   
              
 
