@@ -47,5 +47,15 @@ $(document).ready(function () {
     bullets.css('left', prev.width() + 10)
 
     new WOW().init();
-
+    
+    console.log($('.types').offset());
+    console.log($('.types').scrollTop());
+    $(document).on('scroll' , function() {
+        var BlockScrollTop = $('.types').scrollTop(),
+            BlockOffsetTop = $('.types').offset();
+        if (BlockOffsetTop > BlockScrollTop) {
+            console.log('Fire');
+        }
+    })
 });
+
