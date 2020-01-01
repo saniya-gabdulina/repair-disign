@@ -662,6 +662,9 @@ img {
   font-size: 1.285rem;
   margin-bottom: 19px; }
 
+.control__input:last-of-type {
+  margin-bottom: 1rem; }
+
 .control___label {
   margin-bottom: -7px; }
 
@@ -678,8 +681,10 @@ img {
     justify-content: center;
     font-size: 1.142rem; }
 
-.control .input::placeholder {
-  color: #959595; }
+.control .input {
+  color: #131313; }
+  .control .input::placeholder {
+    color: #959595; }
 
 .control .video__play {
   position: absolute;
@@ -830,6 +835,8 @@ img {
       .footer__input-group--full-width {
         flex-basis: 100%;
         margin-bottom: 3.4rem; }
+    .footer__input:last-of-type {
+      margin-bottom: 1rem; }
   .footer__policy {
     flex-basis: 100%;
     margin-bottom: 3.6rem;

@@ -57,35 +57,89 @@ $(document).ready(function () {
 
     $('.modal__form').validate({
         errorClass: "invalid",
+        errorElement: "div",
         rules: {
             // строчное правило
             userName: {
                 required: true,
-                minlength: 2
+                minlength: 2,
+                maxlength: 15,
             },
             userPhone: "required",
-
             // правило-объект
             userEmail: {
               required: true,
               email: true
             }
-          }, // сообщения й
-          messages: {
+        }, // сообщения при выводе ошибки
+        messages: {
             userName: {
                 required: "Имя обязательно",
-                minlength: "Имя не короче двух букв"
+                minlength: "Имя не короче 2 букв",
+                maxlength: "Имя не длиннее 15 букв",
             }, 
             userPhone: "Телефон обязателен",
             userEmail: {
-              required: "Обязательно укажите email",
-              email: "Введите в формате: name@domain.com"
+                required: "Обязательно укажите email",
+                email: "Введите в формате: name@domain.com"
             }
-          }
+        }
     });
-
+    $('.footer__form').validate({
+        errorClass: "invalid",
+        errorElement: "div",
+        rules: {
+            // одно строчное правило
+            userName: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+            },
+            userPhone: "required",
+            // правила-объект (блок правил)
+            userEmail: {
+                required: true,
+                email: true
+            }
+        }, /* сообщения при выводе ошибки */
+        messages: {
+            userName: {
+                required: "Имя обязательно",
+                minlength: "Имя не короче 2 букв",
+                maxlength: "Имя не длиннее 15 букв"
+            },
+            userPhone: "Телефон обязателен",
+            }
+          });
+        
+        $('.control__form').validate({
+            errorClass: "invalid",
+            errorElement: "div",
+            rules: {
+              // одно строчное правило
+                userName: {
+                required: true,
+                minlength: 2,
+                maxlength: 15
+                },
+                userPhone: "required",
+                // правила-объект (блок правил)
+                userEmail: {
+                    required: true,
+                    email: true
+                }
+            }, /* сообщения при выводе ошибки */
+            messages: {
+                userName: {
+                    required: "Имя обязательно",
+                    minlength: "Имя не короче 2 букв",
+                    maxlength: "Имя не длиннее 15 букв"
+                },
+                userPhone: "Телефон обязателен",
+            }
+          });
 
     // Маска для телефона
-    $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) __-__-___"});
+    $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) ___-__-__"});
 
 });
