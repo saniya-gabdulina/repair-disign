@@ -321,7 +321,8 @@ template {
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
-  font-size: 0.93rem; }
+  font-size: 0.93rem;
+  outline: none; }
   .button:hover {
     cursor: pointer; }
   .button--primary {
@@ -346,7 +347,8 @@ template {
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 1.285rem;
   color: #FFF;
-  padding: 0.5rem 0; }
+  padding: 0.5rem 0;
+  outline: none; }
   .input::placeholder {
     color: #FFF; }
 
@@ -453,7 +455,7 @@ img {
       margin: auto;
       margin-top: 1.2rem;
       font-size: 1.39rem;
-      font-weight: bold;
+      font-weight: normal;
       line-height: 135.84%;
       letter-spacing: 0.26px;
       max-width: 53rem; }
@@ -693,56 +695,54 @@ img {
   left: 50%;
   transform: translate(-50%, -50%); }
 
-.types__section-title {
-  margin-bottom: 2rem; }
-  .types__section-title__heading {
-    font-size: 1.42rem; }
+.types {
+  margin-bottom: 60px; }
+  .types__section-title {
+    margin-bottom: 2rem; }
+    .types__section-title__heading {
+      font-size: 1.42rem; }
 
-.card__image {
-  display: block;
-  width: 100%; }
+.card {
+  position: relative; }
+  .card__image {
+    display: block;
+    width: 100%; }
+  .card__text {
+    position: relative;
+    max-width: 23.6rem;
+    margin: 0 auto;
+    margin-top: -9.3rem;
+    padding: 1.79rem 2.14rem;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+  .card__title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.29rem;
+    margin-top: 0;
+    margin-bottom: 0.7rem; }
+  .card__list {
+    padding: 0 0 0 1rem;
+    margin: 0;
+    font-size: 1.07rem;
+    line-height: 1.79rem;
+    color: #959595;
+    margin-bottom: 2.5rem; }
+  .card__pricetag {
+    position: absolute;
+    left: 0;
+    bottom: -1.79rem;
+    font-size: 1.27rem;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    text-transform: uppercase;
+    background-color: #E3B873;
+    color: #FFF;
+    padding: 1.21rem  1.53rem;
+    width: 16.28rem;
+    height: 3.8rem; }
 
-.card__text {
-  position: relative;
-  max-width: 23.6rem;
-  margin: 0 auto;
-  margin-top: -9.3rem;
-  padding: 1.79rem 2.14rem;
-  background-color: #fff;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
-
-.card__title {
-  font-family: 'Yeseva One', cursive;
-  font-size: 1.29rem;
-  margin-top: 0;
-  margin-bottom: 0.7rem; }
-
-.card__list {
-  padding: 0 0 0 1rem;
-  margin: 0;
-  font-size: 1.07rem;
-  line-height: 1.79rem;
-  color: #959595;
-  margin-bottom: 2.5rem; }
-
-.card__pricetag {
-  position: absolute;
-  left: 0;
-  bottom: -1.79rem;
-  font-size: 1.27rem;
-  font-family: 'Yeseva One', cursive;
-  font-weight: normal;
-  text-transform: uppercase;
-  background-color: #E3B873;
-  color: #FFF;
-  padding: 1.21rem  1.53rem;
-  width: 16.28rem;
-  height: 3.8rem; }
-
-.design {
-  padding-bottom: 30rem; }
-  .design__section-title {
-    margin-bottom: 2.78rem; }
+.design__section-title {
+  margin-bottom: 2.78rem; }
 
 .modal {
   opacity: 0;
@@ -896,6 +896,90 @@ img {
   width: auto;
   bottom: 0;
   bottom: -2px; }
+
+.team {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15rem; }
+  .team__section-title {
+    margin: auto;
+    width: 448px;
+    margin-bottom: 74px;
+    font-weight: normal; }
+  .team__logo {
+    position: absolute;
+    left: -1.5rem;
+    top: -3.5rem; }
+  .team__image {
+    display: block;
+    width: 272px; }
+  .team__text {
+    width: 233px;
+    max-height: 137px;
+    margin-top: -5.8rem;
+    padding: 0.47rem 1.5rem;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+  .team__title {
+    display: flex;
+    justify-content: center;
+    width: 192px;
+    font-family: 'Yeseva One', cursive;
+    font-size: 18px;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-bottom: 6px;
+    padding: 0; }
+  .team__list {
+    display: flex;
+    justify-content: center;
+    width: 187px;
+    padding: 0;
+    margin: 0; }
+  .team__item {
+    flex-direction: row;
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 1.79rem;
+    color: #959595;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    list-style-type: none; }
+  .team__pricetag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    text-transform: uppercase;
+    background-color: #E3B873;
+    color: #FFF;
+    width: 16.60rem;
+    height: 3.142rem;
+    margin-left: -21px;
+    margin-top: 6px; }
+  .team__story {
+    display: flex;
+    flex-direction: column;
+    max-width: 568px;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+    margin-bottom: 15rem;
+    margin-left: 20.7rem; }
+    .team__story::before {
+      content: '';
+      display: block;
+      margin: auto;
+      margin-bottom: 0.7rem;
+      margin-top: -12.8rem;
+      width: 55px;
+      height: 2px;
+      background-color: #E3B873;
+      background-radius: 30px; }
 
 @media screen and (max-width: 1440px) {
   html {
