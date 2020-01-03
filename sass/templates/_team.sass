@@ -10,13 +10,17 @@
             width: 448px
             margin-bottom: 74px
             font-weight: normal
+            &__image
+                top: -1rem
     &__logo
         position: absolute
-        left: -1.5rem
+        left: -6%
         top: -3.5rem
     &__image
-        display: block
-        width: 272px
+        // display: block
+        background-size: cover
+        height: auto
+        width: auto
     &__text
         width: 233px
         max-height: 137px
@@ -59,19 +63,20 @@
         text-transform: uppercase
         background-color: $primary
         color: $light
-        width: 16.60rem
+        width: 16.7rem
         height: 3.142rem
         margin-left: -21px
         margin-top: 6px
     &__story
-        display: flex
-        flex-direction: column
+        display: block
+        margin: auto
+        margin-top: 1.5rem
         max-width: 568px
         font-size: 20px
         line-height: 34px
         text-align: center
         margin-bottom: 15rem
-        margin-left: 20.7rem
+        // margin-left: 25%
         &::before
             content: ''
             display: block

@@ -4,6 +4,9 @@
     .nav
         &__item
             margin-right: 1rem
+    .team
+        &__logo
+            // left: -2rem
 @media screen and ( max-width: 1090px )
     .nav
        display: none
@@ -24,6 +27,9 @@
     .swiper
         &-slide
             margin-bottom: 36px
+    .team
+        &__logo
+            // left: -3rem
 @media screen and ( max-width: 992px )
     .nav
        display: none
@@ -88,6 +94,11 @@
     .mobile-order-top
         order: 0
 
+@media screen and ( max-width: 780px )
+    .team
+        &__logo
+            left: -20%
+
 @media screen and ( max-width: 760px )
     .row
         flex-direction: column
@@ -142,8 +153,22 @@
     .label
         color: $secondary
     .footer
+        position: relative
         background: none
+        background-color: $dark 
+        padding-top: 8rem
+        &__wrap
+            background-color: $dark
+    .team
         background-color: $dark
+        padding-bottom: 8rem
+        &__section
+            &-title
+                width: 100%
+                color: $light
+        &__story
+            display: none
+        
 @media screen and ( max-width: 570px )
     .section
         &-title
@@ -215,7 +240,7 @@
                 flex-direction: column
                 align-items: center
                 font-size: 1.57rem
-                letter-spacing: -0.07rem
+                letter-spacing: -0.01rem
             &__text
                 display: block
                 text-align: center
@@ -275,9 +300,30 @@
             padding: 0
         &__button
             padding: 1.285rem 9.785rem
+@media screen and ( max-width: 358px )
+    .footer
+        &__button
+            padding: 1.285rem 7.785rem
+@media screen and ( max-width: 375px )
+    .team
+        &__section
+            &-title
+                font-size: 15px
+                &__image
+                    margin-bottom: 50px
+               
+        &__image
+            position: relative
+            left: 0.5rem
+            z-index: 0
+        &__logo
+            left: -3.8rem
+            z-index: 1
+        &__text
+            z-index: 2
+       
 @media screen and ( max-width: 320px )
     .hero 
-        
         &__button
             min-width: 19rem
     .card
@@ -289,6 +335,14 @@
     .control
         &__form
             width: 100%
+    .footer
+        &__button
+            padding: 1.285rem 7.785rem
+    .team
+        &__image
+            left: 0.9rem
+        &__logo
+            left: -2.7rem
   
              
 
