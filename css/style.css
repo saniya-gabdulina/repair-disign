@@ -809,13 +809,18 @@ img {
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 3rem; }
+  .footer .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
   .footer__wrap {
     background-color: #181818;
     max-width: 63.07rem;
     margin: auto;
     margin-top: -20rem;
     margin-bottom: 3.714rem;
-    padding: 2.5rem; }
+    padding: 2.5rem;
+    order: 1; }
   .footer__title {
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;
@@ -830,7 +835,8 @@ img {
       color: #E3B873;
       margin: auto;
       margin-top: -0.3rem;
-      margin-bottom: 3rem; }
+      margin-bottom: 3rem;
+      order: 2; }
   .footer__form {
     display: flex;
     justify-content: space-between;
@@ -867,7 +873,8 @@ img {
     justify-content: center;
     margin-right: 3.3rem;
     margin-top: -1.5rem;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    order: 3; }
   .footer__icon {
     display: flex;
     justify-content: center;
@@ -888,7 +895,8 @@ img {
     margin: auto;
     margin-bottom: 4rem;
     width: 66.07rem;
-    height: 33.21rem; }
+    height: 33.21rem;
+    order: 4; }
 
 .projects {
   padding-bottom: 30rem; }
@@ -1050,7 +1058,8 @@ img {
   .swiper-slide {
     margin-bottom: 36px; }
   .footer__map {
-    width: 100%; } }
+    width: 50.07rem;
+    height: 25.21rem; } }
 
 @media screen and (max-width: 992px) {
   .nav {
@@ -1168,10 +1177,24 @@ img {
     background-color: #131313;
     padding-top: 8rem; }
     .footer__wrap {
-      background-color: #131313; }
+      background-color: #131313;
+      order: 1; }
     .footer__map {
       width: 45.07rem;
-      height: 25.21rem; }
+      height: 25.21rem;
+      order: 2; }
+    .footer__title-text {
+      margin-top: -1.09rem;
+      line-height: 138.6%;
+      font-size: 18px;
+      order: 3; }
+    .footer__menu {
+      display: none; }
+    .footer__nav {
+      margin-left: 2rem; }
+    .footer__icon {
+      width: 39px;
+      height: 39px; }
   .team {
     background-color: #131313;
     padding-bottom: 8rem; }
@@ -1180,6 +1203,11 @@ img {
       color: #FFF; }
     .team__story {
       display: none; } }
+
+@media screen and (max-width: 680px) {
+  .footer__map {
+    width: 35.07rem;
+    height: 18.21rem; } }
 
 @media screen and (max-width: 570px) {
   .section-title {
@@ -1260,7 +1288,14 @@ img {
     margin: auto;
     justify-content: center; }
   .control__button {
-    width: 90%; } }
+    width: 90%; }
+  .footer__map {
+    width: 27.07rem;
+    height: 18.21rem; } }
+
+@media screen and (max-width: 487px) {
+  .footer__title-text {
+    max-width: 22.64rem; } }
 
 @media screen and (max-width: 445px) {
   .footer__input {
@@ -1278,7 +1313,7 @@ img {
 
 @media screen and (max-width: 375px) {
   .hero__button {
-    min-width: 23rem; }
+    min-width: 21rem; }
   .section-title__heading {
     font-weight: normal; }
   .section-title__description {
@@ -1309,14 +1344,17 @@ img {
   .footer__wrap {
     padding: 0; }
   .footer__button {
-    padding: 1.285rem 9.785rem; }
+    padding: 1.285rem 9.5rem; }
   .footer__map {
-    width: 340px;
-    height: 255px; } }
+    width: 24.4rem;
+    height: 18.21rem; } }
 
-@media screen and (max-width: 358px) {
+@media screen and (max-width: 360px) {
   .footer__button {
-    padding: 1.285rem 7.785rem; } }
+    padding: 1.285rem 7.785rem; }
+  .footer__map {
+    width: 20.28rem;
+    height: 18.21rem; } }
 
 @media screen and (max-width: 320px) {
   .hero__button {

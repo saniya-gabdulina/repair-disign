@@ -34,7 +34,8 @@
             // left: -3rem
     .footer
         &__map
-            width: 100%
+            width: 50.07rem
+            height: 25.21rem
 @media screen and ( max-width: 992px )
     .nav
        display: none
@@ -168,9 +169,27 @@
         padding-top: 8rem
         &__wrap
             background-color: $dark
+            order: 1
         &__map
             width: 45.07rem
             height: 25.21rem
+            order: 2
+        &__title
+            &-text
+                margin-top: -1.09rem
+                line-height: 138.6%
+                font-size: 18px
+                order: 3
+        &__menu
+            display: none
+        &__nav
+            margin-left: 2rem 
+        &__icon
+            width: 39px
+            height: 39px
+            
+        
+        
     .team
         background-color: $dark
         padding-bottom: 8rem
@@ -180,7 +199,11 @@
                 color: $light
         &__story
             display: none
-
+@media screen and ( max-width: 680px )
+    .footer
+        &__map
+            width: 35.07rem
+            height: 18.21rem
     
 @media screen and ( max-width: 570px )
     .section
@@ -273,6 +296,16 @@
             justify-content: center
         &__button
             width: 90%
+    .footer
+        &__map
+            width: 27.07rem
+            height: 18.21rem       
+@media screen and ( max-width: 487px )
+    .footer
+        &__title
+            &-text
+                max-width: 22.64rem
+    
 @media screen and ( max-width: 445px )
     .footer
         &__input
@@ -290,7 +323,7 @@
 @media screen and ( max-width: 375px )
     .hero 
         &__button
-            min-width: 23rem
+            min-width: 21rem
     .section
         &-title
             &__heading
@@ -326,15 +359,23 @@
             flex-basis: 100%
         &__wrap
             padding: 0
+           
         &__button
-            padding: 1.285rem 9.785rem
+            padding: 1.285rem 9.5rem
         &__map
-            width: 340px
-            height: 255px
-@media screen and ( max-width: 358px )
+            width: 24.4rem
+            height: 18.21rem
+       
+                
+        
+
+@media screen and ( max-width: 360px )
     .footer
         &__button
             padding: 1.285rem 7.785rem
+        &__map
+            width: 20.28rem
+            height: 18.21rem
 
 @media screen and ( max-width: 320px )
     .hero 
@@ -352,6 +393,7 @@
     .footer
         &__button
             padding: 1.285rem 7.785rem
+        
     .team
         &__image
             left: 0.9rem
