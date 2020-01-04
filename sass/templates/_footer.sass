@@ -16,6 +16,15 @@
         text-align: center
         margin-bottom: 3.214rem
         margin-top: 0
+        line-height: 1.5
+        &-text
+            max-width: 37.64rem
+            color: $primary
+            margin: auto
+            margin-top: -0.3rem
+            margin-bottom: 3rem
+            // margin-right: 23rem
+
     &__form
         display: flex 
         justify-content: space-between
@@ -34,14 +43,48 @@
                 flex-basis: 100%
                 margin-bottom: 3.4rem
         &:last-of-type
-            margin-bottom: 1rem
+            margin-bottom: -0.1rem
     &__policy
             flex-basis: 100%
             margin-bottom: 3.6rem
             margin-right: 2rem
     &__button
         margin: auto
-        padding: 1.285rem 4.785rem
+        padding: 1.22rem 4.48rem
+        border-radius: 0
+        font-size: 1.07rem
+
     &__menu
         background-color: $dark
         padding: 4.285rem 0
+    &__nav
+        display: flex
+        justify-content: center
+        margin-right: 3.3rem
+        margin-top: -1.5rem
+        margin-bottom: 3rem
+    &__icon
+        display: flex
+        justify-content: center
+        width: 28px
+        height: 28px
+        background: no-repeat center
+        background-color: $primary 
+        border: none
+        cursor: pointer
+        outline: none
+        border-radius: 50%
+        margin-left: 1.1rem
+        
+        &-email
+            background-image:  url('../img/email.svg') 
+            
+        &-instagram
+            background-image: url('../img/instagram.svg') 
+    &__map
+        margin: auto
+        margin-bottom: 4rem
+        // margin-right: 9rem
+        width: 66.07rem
+        height: 33.21rem
+        

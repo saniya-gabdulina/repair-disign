@@ -7,6 +7,8 @@
     .team
         &__logo
             // left: -2rem
+    
+
 @media screen and ( max-width: 1090px )
     .nav
        display: none
@@ -30,6 +32,9 @@
     .team
         &__logo
             // left: -3rem
+    .footer
+        &__map
+            width: 100%
 @media screen and ( max-width: 992px )
     .nav
        display: none
@@ -79,6 +84,10 @@
     .video
         &__play
             width: 63px
+    .footer
+        &__map
+            width: 50.07rem
+            height: 25.21rem
         
 @media screen and ( max-width: 840px )
     .card
@@ -159,6 +168,9 @@
         padding-top: 8rem
         &__wrap
             background-color: $dark
+        &__map
+            width: 45.07rem
+            height: 25.21rem
     .team
         background-color: $dark
         padding-bottom: 8rem
@@ -168,7 +180,8 @@
                 color: $light
         &__story
             display: none
-        
+
+    
 @media screen and ( max-width: 570px )
     .section
         &-title
@@ -291,27 +304,12 @@
         &__pricetag
             min-width: 13.6rem
             min-height: 2.85rem
-    .footer
-        &__input
-            border-bottom: 1px solid $secondary
-        &-group
-            flex-basis: 100%
-        &__wrap
-            padding: 0
-        &__button
-            padding: 1.285rem 9.785rem
-@media screen and ( max-width: 358px )
-    .footer
-        &__button
-            padding: 1.285rem 7.785rem
-@media screen and ( max-width: 375px )
     .team
         &__section
             &-title
                 font-size: 15px
                 &__image
                     margin-bottom: 50px
-               
         &__image
             position: relative
             left: 0.5rem
@@ -321,7 +319,23 @@
             z-index: 1
         &__text
             z-index: 2
-       
+    .footer
+        &__input
+            border-bottom: 1px solid $secondary
+        &-group
+            flex-basis: 100%
+        &__wrap
+            padding: 0
+        &__button
+            padding: 1.285rem 9.785rem
+        &__map
+            width: 340px
+            height: 255px
+@media screen and ( max-width: 358px )
+    .footer
+        &__button
+            padding: 1.285rem 7.785rem
+
 @media screen and ( max-width: 320px )
     .hero 
         &__button

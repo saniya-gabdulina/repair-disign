@@ -57,7 +57,7 @@ $(document).ready(function () {
 
     $('.modal__form').validate({
         errorClass: "invalid",
-        errorElement: "div",
+        errorElement: "em",
         rules: {
             // строчное правило
             userName: {
