@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
-
 <body>
+    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(56918839, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/56918839" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
     <header class="header">
         <div class="container">
             <div class="menu">
@@ -27,7 +27,7 @@
                 </nav>
                 <div class="contacts menu__contacts">
                     <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-                    <button class="button contacts__button button--primary" data-toggle="modal">Заказать
+                    <button onclick="ym('56918839', 'reachGoal', '#button'); return true;" class="button contacts__button button--primary" id="contacts__button" data-toggle="modal">Заказать
                         звонок</button>
                 </div>
             </div>
@@ -186,7 +186,7 @@
                 <!-- /.section-title -->
                 <div class="control__video-wrp">
                     <div class="control__video video">
-                        <img src="img\play-icon.svg" alt="play-icon" class="video__play">
+                        <img src="img/play-icon.svg" alt="play-icon" class="video__play">
                     </div>
                     <!-- /.control_video video -->
                 </div>
@@ -195,7 +195,7 @@
                     Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку
                     на трансляцию.
                 </p>
-                <form action="#" class="form control__form">
+                <form action="send.php" method="POST" class="form control__form">
                     <div class="control__input-group">
                         <label for="user-name" class="label form__label control__label">Имя</label>
                         <input type="text" name="userName" class="input form__input control__input" id="user-name"
@@ -215,6 +215,7 @@
                             обработкой данных</label>
                     </div>
                 </form>
+            </div>
         </section>
         <!-- /.section control -->
         <section class="section types">
@@ -542,7 +543,7 @@
         <div class="container">
             <div class="footer__wrap">
                 <h3 class="footer__title">Остались вопросы?</h3>
-                <form action="#" class="form footer__form">
+                <form action="send.php" method="POST" class="form footer__form">
                     <div class="input-group footer__input-group">
                         <label for="user-name-footer" class="label form__label label--light">Имя</label>
                         <input type="text" name="userName" class="input form__input footer__input input--light"
@@ -639,7 +640,7 @@
     </div>
     <!-- /.modal -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="libs/wow.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
