@@ -4,11 +4,6 @@
     .nav
         &__item
             margin-right: 1rem
-    .team
-        &__logo
-            // left: -2rem
-    
-
 @media screen and ( max-width: 1090px )
     .nav
        display: none
@@ -29,9 +24,6 @@
     .swiper
         &-slide
             margin-bottom: 36px
-    .team
-        &__logo
-            // left: -3rem
     .footer
         &__map
             width: 50.07rem
@@ -68,10 +60,16 @@
         &__text
             max-width: 27.57rem
             margin-right: 40px 
-  
     .mobile-order-top
         order: 0
+@media screen and ( max-width: 910px )
+    .footer
+        &__wrap
+            width: 53.07rem   
 
+    .profile
+        &__logo
+            transform: translate(0, -50%)
 @media screen and ( max-width: 870px )
     .container
         width: 100%
@@ -89,7 +87,6 @@
         &__map
             width: 50.07rem
             height: 25.21rem
-        
 @media screen and ( max-width: 840px )
     .card
         &__pricetag
@@ -103,12 +100,6 @@
             margin-right: 2.85rem 
     .mobile-order-top
         order: 0
-
-@media screen and ( max-width: 780px )
-    .team
-        &__logo
-            left: -20%
-
 @media screen and ( max-width: 760px )
     .row
         flex-direction: column
@@ -170,11 +161,13 @@
         &__wrap
             background-color: $dark
             order: 1
+            width: 43.07rem   
         &__map
             width: 45.07rem
             height: 25.21rem
             order: 2
         &__title
+            margin-top: 3rem
             &-text
                 margin-top: -1.09rem
                 line-height: 138.6%
@@ -187,9 +180,6 @@
         &__icon
             width: 39px
             height: 39px
-            
-        
-        
     .team
         background-color: $dark
         padding-bottom: 8rem
@@ -199,8 +189,16 @@
                 color: $light
         &__story
             display: none
+    .profile
+        margin-bottom: 6.5rem
+        &__logo
+            transform: translate(-50%, -50%)
+        &__story
+            display: none
 @media screen and ( max-width: 680px )
     .footer
+        &__wrap
+            width: 34.07rem
         &__map
             width: 35.07rem
             height: 18.21rem
@@ -295,18 +293,7 @@
             margin: auto
             justify-content: center
         &__button
-            width: 90%
-    .footer
-        &__map
-            width: 27.07rem
-            height: 18.21rem       
-@media screen and ( max-width: 487px )
-    .footer
-        &__title
-            &-text
-                max-width: 22.64rem
-    
-@media screen and ( max-width: 445px )
+            width: 90% 
     .footer
         &__input
             border-bottom: 1px solid $secondary
@@ -314,8 +301,18 @@
             flex-basis: 100%
         &__wrap
             padding: 0
+            width: 24.07rem
+           
         &__button
-            padding: 1.285rem 10.785rem
+            padding: 1.285rem 9.5rem
+        &__map
+            width: 24.4rem
+            height: 18.21rem      
+@media screen and ( max-width: 487px )
+    .footer
+        &__title
+            &-text
+                max-width: 22.64rem
 @media screen and ( max-width: 425px )
     .control
         &__button
@@ -337,38 +334,6 @@
         &__pricetag
             min-width: 13.6rem
             min-height: 2.85rem
-    .team
-        &__section
-            &-title
-                font-size: 15px
-                &__image
-                    margin-bottom: 50px
-        &__image
-            position: relative
-            left: 0.5rem
-            z-index: 0
-        &__logo
-            left: -3.8rem
-            z-index: 1
-        &__text
-            z-index: 2
-    .footer
-        &__input
-            border-bottom: 1px solid $secondary
-        &-group
-            flex-basis: 100%
-        &__wrap
-            padding: 0
-           
-        &__button
-            padding: 1.285rem 9.5rem
-        &__map
-            width: 24.4rem
-            height: 18.21rem
-       
-                
-        
-
 @media screen and ( max-width: 360px )
     .footer
         &__button
@@ -376,7 +341,9 @@
         &__map
             width: 20.28rem
             height: 18.21rem
-
+        &__wrap
+            padding: 0
+            width: 22.07rem
 @media screen and ( max-width: 320px )
     .hero 
         &__button
@@ -391,15 +358,9 @@
         &__form
             width: 100%
     .footer
+
         &__button
             padding: 1.285rem 7.785rem
-        
-    .team
-        &__image
-            left: 0.9rem
-        &__logo
-            left: -2.7rem
-  
              
 
     

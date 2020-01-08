@@ -880,7 +880,7 @@ img {
     width: 100%; }
   .footer__wrap {
     background-color: #181818;
-    max-width: 63.07rem;
+    width: 63.07rem;
     margin: auto;
     margin-top: -20rem;
     margin-bottom: 3.714rem;
@@ -895,7 +895,8 @@ img {
     text-align: center;
     margin-bottom: 3.214rem;
     margin-top: 0;
-    line-height: 1.5; }
+    line-height: 1.5;
+    letter-spacing: 1px; }
     .footer__title-text {
       max-width: 37.64rem;
       color: #E3B873;
@@ -1045,28 +1046,33 @@ img {
       top: -1rem; }
 
 .profile {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column; }
+  max-width: 272px;
+  margin: 0 auto;
+  position: relative; }
   .profile__logo {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: absolute;
+    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
     top: 0;
     left: 0;
     -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    background-color: #E3B873;
+    width: 70px;
+    height: 70px; }
   .profile__image {
     background-size: cover;
     height: auto;
     width: auto; }
   .profile__text {
+    position: relative;
     width: 233px;
+    margin: auto;
     max-height: 137px;
-    margin-top: -5.8rem;
+    margin-top: -6rem;
     padding: 0.47rem 1.5rem;
     background-color: #FFF;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
@@ -1078,7 +1084,7 @@ img {
     width: 192px;
     font-family: 'Yeseva One', cursive;
     font-size: 18px;
-    margin-top: 16px;
+    margin-top: 1.2rem;
     margin-left: auto;
     margin-bottom: 6px;
     padding: 0; }
@@ -1121,20 +1127,26 @@ img {
   .profile__story {
     display: -webkit-box;
     display: flex;
+    position: relative;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
     margin: auto;
-    margin-top: 1.5rem;
+    margin-bottom: 15rem;
     max-width: 568px;
     font-size: 20px;
     line-height: 34px;
-    text-align: center;
-    margin-bottom: 15rem; }
+    text-align: center; }
     .profile__story::before {
       content: '';
-      display: block;
+      display: -webkit-box;
+      display: flex;
       margin: auto;
+      margin-top: 3.8rem;
       margin-bottom: 0.7rem;
-      margin-top: -12.8rem;
-      width: 55px;
+      width: 4rem;
       height: 2px;
       background-color: #E3B873;
       background-radius: 30px; }
@@ -1199,6 +1211,13 @@ img {
     -webkit-box-ordinal-group: 1;
     order: 0; } }
 
+@media screen and (max-width: 910px) {
+  .footer__wrap {
+    width: 53.07rem; }
+  .profile__logo {
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%); } }
+
 @media screen and (max-width: 870px) {
   .container {
     width: 100%;
@@ -1226,10 +1245,6 @@ img {
   .mobile-order-top {
     -webkit-box-ordinal-group: 1;
     order: 0; } }
-
-@media screen and (max-width: 780px) {
-  .team__logo {
-    left: -20%; } }
 
 @media screen and (max-width: 760px) {
   .row {
@@ -1303,18 +1318,21 @@ img {
     .footer__wrap {
       background-color: #131313;
       -webkit-box-ordinal-group: 2;
-      order: 1; }
+      order: 1;
+      width: 43.07rem; }
     .footer__map {
       width: 45.07rem;
       height: 25.21rem;
       -webkit-box-ordinal-group: 3;
       order: 2; }
-    .footer__title-text {
-      margin-top: -1.09rem;
-      line-height: 138.6%;
-      font-size: 18px;
-      -webkit-box-ordinal-group: 4;
-      order: 3; }
+    .footer__title {
+      margin-top: 3rem; }
+      .footer__title-text {
+        margin-top: -1.09rem;
+        line-height: 138.6%;
+        font-size: 18px;
+        -webkit-box-ordinal-group: 4;
+        order: 3; }
     .footer__menu {
       display: none; }
     .footer__nav {
@@ -1329,9 +1347,18 @@ img {
       width: 100%;
       color: #FFF; }
     .team__story {
+      display: none; }
+  .profile {
+    margin-bottom: 6.5rem; }
+    .profile__logo {
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+    .profile__story {
       display: none; } }
 
 @media screen and (max-width: 680px) {
+  .footer__wrap {
+    width: 34.07rem; }
   .footer__map {
     width: 35.07rem;
     height: 18.21rem; } }
@@ -1425,23 +1452,22 @@ img {
     justify-content: center; }
   .control__button {
     width: 90%; }
-  .footer__map {
-    width: 27.07rem;
-    height: 18.21rem; } }
-
-@media screen and (max-width: 487px) {
-  .footer__title-text {
-    max-width: 22.64rem; } }
-
-@media screen and (max-width: 445px) {
   .footer__input {
     border-bottom: 1px solid #959595; }
   .footer-group {
     flex-basis: 100%; }
   .footer__wrap {
-    padding: 0; }
+    padding: 0;
+    width: 24.07rem; }
   .footer__button {
-    padding: 1.285rem 10.785rem; } }
+    padding: 1.285rem 9.5rem; }
+  .footer__map {
+    width: 24.4rem;
+    height: 18.21rem; } }
+
+@media screen and (max-width: 487px) {
+  .footer__title-text {
+    max-width: 22.64rem; } }
 
 @media screen and (max-width: 425px) {
   .control__button {
@@ -1459,38 +1485,17 @@ img {
     font-weight: normal; }
   .card__pricetag {
     min-width: 13.6rem;
-    min-height: 2.85rem; }
-  .team__section-title {
-    font-size: 15px; }
-    .team__section-title__image {
-      margin-bottom: 50px; }
-  .team__image {
-    position: relative;
-    left: 0.5rem;
-    z-index: 0; }
-  .team__logo {
-    left: -3.8rem;
-    z-index: 1; }
-  .team__text {
-    z-index: 2; }
-  .footer__input {
-    border-bottom: 1px solid #959595; }
-  .footer-group {
-    flex-basis: 100%; }
-  .footer__wrap {
-    padding: 0; }
-  .footer__button {
-    padding: 1.285rem 9.5rem; }
-  .footer__map {
-    width: 24.4rem;
-    height: 18.21rem; } }
+    min-height: 2.85rem; } }
 
 @media screen and (max-width: 360px) {
   .footer__button {
     padding: 1.285rem 7.785rem; }
   .footer__map {
     width: 20.28rem;
-    height: 18.21rem; } }
+    height: 18.21rem; }
+  .footer__wrap {
+    padding: 0;
+    width: 22.07rem; } }
 
 @media screen and (max-width: 320px) {
   .hero__button {
@@ -1503,11 +1508,7 @@ img {
   .control__form {
     width: 100%; }
   .footer__button {
-    padding: 1.285rem 7.785rem; }
-  .team__image {
-    left: 0.9rem; }
-  .team__logo {
-    left: -2.7rem; } }
+    padding: 1.285rem 7.785rem; } }
 
 @-webkit-keyframes slideLeft {
   0% {

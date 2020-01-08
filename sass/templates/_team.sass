@@ -13,22 +13,30 @@
             &__image
                 top: -1rem
 .profile
-    display: flex
-    justify-content: space-between
-    align-items: center
-    flex-direction: column 
+    max-width: 272px
+    margin: 0 auto
+    position: relative
     &__logo
+        display: flex
+        justify-content: center
+        position: absolute
+        box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5)
         top: 0
         left: 0
         transform: translate(-50%, -50%)
+        background-color: $primary
+        width: 70px
+        height: 70px
     &__image
         background-size: cover
         height: auto
         width: auto
     &__text
+        position: relative
         width: 233px
+        margin: auto
         max-height: 137px
-        margin-top: -5.8rem
+        margin-top: -6rem
         padding: 0.47rem 1.5rem
         background-color: $light
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
@@ -38,7 +46,7 @@
         width: 192px
         font-family: 'Yeseva One', cursive
         font-size: 18px
-        margin-top: 16px
+        margin-top: 1.2rem
         margin-left: auto
         margin-bottom: 6px
         padding: 0 
@@ -73,20 +81,24 @@
         margin-top: 6px
     &__story
         display: flex
+        position: relative
+        justify-content: center
+        flex-direction: column
         margin: auto
-        margin-top: 1.5rem
+        // margin-top: 1.5rem
+        margin-bottom: 15rem 
         max-width: 568px
         font-size: 20px
         line-height: 34px
         text-align: center
-        margin-bottom: 15rem
         &::before
             content: ''
-            display: block
+            display: flex
             margin: auto
+            margin-top: 3.8rem
             margin-bottom: 0.7rem
-            margin-top: -12.8rem
-            width: 55px
+            width: 4rem
             height: 2px
             background-color: $primary
             background-radius: 30px
+            
