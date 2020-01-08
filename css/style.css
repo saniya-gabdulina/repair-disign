@@ -1043,22 +1043,34 @@ img {
     font-weight: normal; }
     .team__section-title__image {
       top: -1rem; }
-  .team__logo {
-    position: absolute;
-    left: -6%;
-    top: -3.5rem; }
-  .team__image {
+
+.profile {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column; }
+  .profile__logo {
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  .profile__image {
     background-size: cover;
     height: auto;
     width: auto; }
-  .team__text {
+  .profile__text {
     width: 233px;
     max-height: 137px;
     margin-top: -5.8rem;
     padding: 0.47rem 1.5rem;
-    background-color: #fff;
+    background-color: #FFF;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
-  .team__title {
+  .profile__title {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
@@ -1070,7 +1082,7 @@ img {
     margin-left: auto;
     margin-bottom: 6px;
     padding: 0; }
-  .team__list {
+  .profile__list {
     display: -webkit-box;
     display: flex;
     -webkit-box-pack: center;
@@ -1078,7 +1090,7 @@ img {
     width: 187px;
     padding: 0;
     margin: 0; }
-  .team__item {
+  .profile__item {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-direction: row;
@@ -1089,7 +1101,7 @@ img {
     margin-right: 0;
     margin-bottom: 1rem;
     list-style-type: none; }
-  .team__pricetag {
+  .profile__pricetag {
     display: -webkit-box;
     display: flex;
     -webkit-box-align: center;
@@ -1106,8 +1118,9 @@ img {
     height: 3.142rem;
     margin-left: -21px;
     margin-top: 6px; }
-  .team__story {
-    display: block;
+  .profile__story {
+    display: -webkit-box;
+    display: flex;
     margin: auto;
     margin-top: 1.5rem;
     max-width: 568px;
@@ -1115,7 +1128,7 @@ img {
     line-height: 34px;
     text-align: center;
     margin-bottom: 15rem; }
-    .team__story::before {
+    .profile__story::before {
       content: '';
       display: block;
       margin: auto;
