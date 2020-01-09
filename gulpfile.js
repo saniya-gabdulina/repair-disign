@@ -41,7 +41,7 @@ function buildCSS(done) {
     done();
 }
 function buildJS(done) {
-    src(['js/**.js', '!js/**.min.js'])
+    src(['js/**.{js,css}', '!js/**.min.js'])
         .pipe(minify({ext:{
                 min:'.js'
             }
@@ -70,11 +70,11 @@ function fonts(done) {
     done();
 }
 function imagemin(done) {
-    src('img/**/**')
+    src('img/**/**.{png,jpg,jpeg}')
         .pipe(tinypng({ key: 'kk7H74701gt4BFHQn4rFGK0r5xlb0vXb', }))
         .pipe(dest('dist/img/'))
-        src('img/**/*.svg')
-        .pipe(dest('dist/img/'))
+    src('img/**/*.svg')
+        .pipe(dest('dist/img/')) 
     done();
 }
 
