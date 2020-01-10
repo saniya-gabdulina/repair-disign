@@ -47,6 +47,19 @@ $(document).ready(function () {
     bullets.css('left', prev.width() + 10)
 
     new WOW().init();
+    
+    function lazyLoad() {
+        let img = document.querySelectorAll('.lazyImg');
+        img.forEach(item => {
+            $(document).scroll(function () {
+                if (($(document).scrollTop() + $(window).height()) > $(item).offset().top) {
+                    let imgSrc = item.dataset.src;
+                    item.src = imgSrc;
+                }
+            })
+        })
+    };
+    lazyLoad();
 
     $(document).scroll(function() {
         console.log($('.types .section-title__heading').offset());
@@ -150,8 +163,21 @@ $(document).ready(function () {
                 userPhone: "Телефон обязателен",
             }
           });
+    
 
     // Маска для телефона
     $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) ___-__-__"});
+    
+    var isAddedMap = false;
 
+        $(window).scroll(function() {
+            var el = $('.map');
+            if ($(this).scrollTop() > el.offset().top - 800) {
+                if(isAddedMap) return;
+                isAddedMap = true;
+                var script = document.createElement('script');
+                script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3640a6472e0817484e41c82f3bab31623c39b2a8835bc6ba7b8029c7367f5a4f&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false";
+                el.append(script);
+            };
+        });
 });
