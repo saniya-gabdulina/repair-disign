@@ -117,6 +117,7 @@ $(document).ready(function () {
         errorElement: "em",
         rules: {
             // строчное правило
+            policyCheckbox: "required",
             userName: {
                 required: true,
                 minlength: 2,
@@ -158,6 +159,7 @@ $(document).ready(function () {
         errorClass: "invalid",
         errorElement: "div",
         rules: {
+            policyCheckbox: "required",
             // одно строчное правило
             userName: {
             required: true,
@@ -185,6 +187,7 @@ $(document).ready(function () {
             errorClass: "invalid",
             errorElement: "div",
             rules: {
+                policyCheckbox: "required",
               // одно строчное правило
                 userName: {
                 required: true,

@@ -828,7 +828,9 @@ img {
     max-width: 36.36rem;
     background: #131313 url("../img/bg-lines.svg") no-repeat center;
     padding: 2.357rem 3.5rem 1.928rem;
-    color: #FFF; }
+    color: #FFF;
+    overflow-y: auto;
+    max-height: 100%; }
   .modal__close {
     position: absolute;
     right: 0;
