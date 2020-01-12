@@ -263,6 +263,6 @@ $(document).ready(function () {
     })
 
     function videoPlay(event) {
-        event.target.videoPlay();
+        event.target.playVideo();
     }
 });
