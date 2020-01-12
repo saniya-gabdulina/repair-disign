@@ -266,6 +266,7 @@ $(document).ready(function () {
             'onReady': videoPlay,
           }
         });
+        $('.video__play').fadeOut(100);
     })
 
     function videoPlay(event) {

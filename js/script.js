@@ -101,6 +101,12 @@ $(document).ready(function () {
                     item.src = imgSrc;
                 }
             })
+            $(document).ready(function () {
+                if (($(document).scrollTop() + $(window).height()) > $(item).offset().top) {
+                    let imgSrc = item.dataset.src;
+                    item.src = imgSrc;
+                }
+            })
         })
     };
     lazyLoad();
@@ -304,6 +310,7 @@ $(document).ready(function () {
             'onReady': videoPlay,
           }
         });
+        $('.video__play').fadeOut(100);
     })
 
     function videoPlay(event) {
