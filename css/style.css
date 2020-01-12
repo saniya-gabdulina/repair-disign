@@ -1623,6 +1623,10 @@ img {
     max-width: 24.4rem;
     height: 18.21rem; } }
 
+@media screen and (max-width: 520px) and (-ms-high-contrast: active) {
+  .footer {
+    padding-bottom: 4rem; } }
+
 @media screen and (max-width: 425px) {
   .hero__button {
     max-width: 100%; }
