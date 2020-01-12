@@ -675,6 +675,12 @@ img {
     max-width: 58.357rem;
     margin: auto;
     margin-bottom: 4.428rem; }
+  .control__video--player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
 
 .control__text {
   max-width: 40.785rem;

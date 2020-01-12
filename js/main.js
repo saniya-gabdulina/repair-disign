@@ -57,6 +57,12 @@ $(document).ready(function () {
                     item.src = imgSrc;
                 }
             })
+            $(document).ready(function () {
+                if (($(document).scrollTop() + $(window).height()) > $(item).offset().top) {
+                    let imgSrc = item.dataset.src;
+                    item.src = imgSrc;
+                }
+            })
         })
     };
     lazyLoad();
@@ -263,6 +269,6 @@ $(document).ready(function () {
     })
 
     function videoPlay(event) {
-        event.target.videoPlay();
+        event.target.playVideo();
     }
 });

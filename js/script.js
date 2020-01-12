@@ -106,7 +106,7 @@ $(document).ready(function () {
     lazyLoad();
 
     $(document).scroll(function() {
-        console.log($('.types .section-title__heading').offset());
+        // console.log($('.types .section-title__heading').offset());
         if (($(document).scrollTop() + $(window).height()) > $('.types .section-title__heading').offset().top) {
             $('.types .section-title__heading').addClass('myAnimation');
         }
@@ -307,6 +307,6 @@ $(document).ready(function () {
     })
 
     function videoPlay(event) {
-        event.target.videoPlay();
+        event.target.playVideo();
     }
 });
