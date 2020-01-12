@@ -214,7 +214,7 @@ $(document).ready(function () {
             errorClass: "invalid",
             rules: {
                 // simple rule, converted to {required:true}
-                policyCheckbox: "required",
+                policyCheckbox: true,
                 userName: {
                     required: true,
                     minlength: 2,
@@ -267,7 +267,7 @@ $(document).ready(function () {
                             $(form)[0].reset();
                             modal.removeClass('modal--visible');
                             setTimeout(function() {
-                                $('.modal-thanks').addClass('modal--visible');
+                                $('.modal-thanks').removeClass('modal--visible');
                             }, 2000); //убирает окно благодарности через 2000мс (2 секунды) 
                         }
                     });
@@ -281,7 +281,7 @@ $(document).ready(function () {
     // Маска для телефона
     $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) ___-__-__"});
     
-    var isAddedMap = false;
+     var isAddedMap = false;
 
         $(window).scroll(function() {
             var el = $('.map');
@@ -293,4 +293,20 @@ $(document).ready(function () {
                 el.append(script);
             };
         });
+    
+    var player;
+    $('.video__play').on('click',function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '465',
+          width: '100%',
+          videoId: 'o6oZpqxowis',
+          events: {
+            'onReady': videoPlay,
+          }
+        });
+    })
+
+    function videoPlay(event) {
+        event.target.videoPlay();
+    }
 });

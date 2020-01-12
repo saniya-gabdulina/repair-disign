@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="ccs/style.css">
     <link rel="icon" href="img/favicon.png" sizes="32x32" >
     <title>Repair Design</title>
 </head>
@@ -185,7 +186,8 @@
                 </div>
                 <!-- /.section-title -->
                 <div class="control__video-wrp">
-                    <div class="control__video video">
+                    <div class="control__video video" id="player">
+                        <script src="https://www.youtube.com/iframe_api"></script>
                         <img src="/" data-src="img/play-icon.svg" alt="play-icon" class="video__play lazyImg">
                     </div>
                     <!-- /.control_video video -->
@@ -577,8 +579,8 @@
                 Ростов на дону, Торговый центр Plaza Прямой телефон +7 (999) 768 32 99
             </p>
             <div class="footer__nav">
-                <a href="#" class="footer__icon footer__icon-email"></a>
-                <a href="#" class="footer__icon footer__icon-instagram"></a>
+                <a href="mailto: saniya@mail.ru" class="footer__icon footer__icon-email"></a>
+                <a href="https://www.instagram.com/?hl=ru" class="footer__icon footer__icon-instagram"></a>
             </div>
             <div class="map footer__map "></div>
 
@@ -644,7 +646,12 @@
             <!-- /.hero__content -->
         </div>
     </div>
-    <script src="js/script.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <!-- Yandex.Metrika counter -->
     <script>
         (function (m, e, t, r, i, k, a) {

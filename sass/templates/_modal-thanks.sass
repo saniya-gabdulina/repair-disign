@@ -1,15 +1,22 @@
 .modal-thanks
-    opacity: 1
-    // visibility: hidden
+    display: none
     position: fixed
     z-index: 199
-    left: 0
-    top:
-    bottom: 0
-    right: 0
-    width: 100% 
-    height: 100%
-    background-color: rgba($dark, 0.6)
-    display: flex
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 95%
+    max-width: 400px
+    background-color: #fff
     align-items: center
     justify-content: center
+    .thanks__title
+        font-size: 24px
+        text-align: center
+        text-transform: uppercase
+    .thanks__text
+        font-size: 18px
+        text-transform: normal
+        text-align: center
+    &.modal--visible
+        display: flex

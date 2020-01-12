@@ -157,6 +157,16 @@ function buildJS(done) {
         .pipe(dest('js/'))
     done();
 }
+// function buildJS(done) {
+//     src(['js/.js', '!js/.min.js']) //завернули в массив и сказали, что уже минимизированные файлы брать не надо /
+//         .pipe(minify({ext:{  //настройка из плагина, чтобы не переименовывал файлы, кот. в него поступают /
+//               min:'.js'
+//             }
+//         }))
+//       .pipe(dest('dist/js/'));
+//     src('js/**.min.js').pipe(dest('dist/js/'));  //добавляем все файлы min.js в папку тоже, т.к. готовим все файлы к публикации  
+//     done();
+// }
 function html(done) {
     src('**.html')
         .pipe(htmlmin({ collapseWhitespace: true }))

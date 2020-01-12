@@ -26,7 +26,7 @@
             margin-bottom: 36px
     .footer
         &__map
-            width: 50.07rem
+            max-width: 50.07rem
             height: 25.21rem
 @media screen and ( max-width: 992px )
     .nav
@@ -54,7 +54,7 @@
             margin-bottom: 2.28rem
         &__button
             display: block
-            min-width: 22.86rem
+            max-width: 22.86rem
             margin-bottom: 1.85rem
     .section-title
         &__text
@@ -65,28 +65,30 @@
 @media screen and ( max-width: 910px )
     .footer
         &__wrap
-            width: 53.07rem   
+            max-width: 53.07rem   
 
     .profile
         &__logo
             transform: translate(0, -50%)
 @media screen and ( max-width: 870px )
     .container
-        width: 100%
+        max-width: 100%
         padding-left: 17px
         padding-right: 17px
     .control
         &__form
-            width: 50rem
+            max-width: 50rem
         &__text
             font-size: 1rem
     .video
         &__play
-            width: 63px
+            max-width: 63px
     .footer
         &__map
-            width: 50.07rem
+            max-width: 50.07rem
             height: 25.21rem
+        .container
+            width: 100%
 @media screen and ( max-width: 840px )
     .card
         &__pricetag
@@ -125,7 +127,7 @@
     .mobile-order-top
         order: -1
     .col-50
-        width: 100%
+        max-width: 100%
     .control
         background-color: $dark
         color: $light
@@ -133,16 +135,16 @@
         &__section-title
             padding-top: 60px
         &__form
-            width: 50%
+            max-width: 50%
             flex-direction: column
         &__input-group
             margin-bottom: 63px
         &__button
-            width: 340px
+            max-width: 340px
             height: 51px
             transform: translatey(44px)
         &__policy
-            width: 285.62px
+            max-width: 285.62px
             height: 18px
             transform: translatey(-103px)
             margin-top: 0
@@ -161,9 +163,9 @@
         &__wrap
             background-color: $dark
             order: 1
-            width: 43.07rem   
+            max-width: 43.07rem   
         &__map
-            width: 45.07rem
+            max-width: 45.07rem
             height: 25.21rem
             order: 2
         &__title
@@ -185,11 +187,12 @@
         padding-bottom: 8rem
         &__section
             &-title
-                width: 100%
+                max-width: 100%
                 color: $light
         &__story
             display: none
     .profile
+        margin-right: -35px
         margin-bottom: 6.5rem
         &__logo
             transform: translate(-50%, -50%)
@@ -198,9 +201,9 @@
 @media screen and ( max-width: 680px )
     .footer
         &__wrap
-            width: 34.07rem
+            max-width: 34.07rem
         &__map
-            width: 35.07rem
+            max-width: 35.07rem
             height: 18.21rem
     
 @media screen and ( max-width: 570px )
@@ -230,12 +233,15 @@
             display: none
         &__content
             max-width: 22.86rem
+            margin-left: auto
+            margin-right: auto
+            text-align: center
         &__text
             font-size: 1.29rem
             margin-bottom: 2.28rem
         &__button
             display: block
-            min-width: 22.86rem
+            max-width: 22.86rem
             margin-bottom: 2.85rem
     .swiper
         &-slide
@@ -248,7 +254,7 @@
     .mobile-order-top
         order: -1
     .col-50
-        width: 100%
+        max-width: 100%
     .control
         &__form
             margin-left: 98px
@@ -264,7 +270,7 @@
             display: none
     .col
         &-50
-            width: 100%
+            max-width: 100%
     .section
         &-title 
             display: block
@@ -289,25 +295,25 @@
                     display: none
     .control
         &__form
-            width: 100%
+            max-width: 100%
             margin: auto
             justify-content: center
         &__button
-            width: 90% 
+            max-width: 90% 
     .footer
+        &__button
+            max-width: 100%
         &__input
             border-bottom: 1px solid $secondary
         &-group
             flex-basis: 100%
         &__wrap
             padding: 0
-            width: 24.07rem
-           
-        &__button
-            padding: 1.285rem 9.5rem
+            max-width: 24.07rem
         &__map
-            width: 24.4rem
-            height: 18.21rem      
+            max-width: 24.4rem
+            height: 18.21rem    
+          
 @media screen and ( max-width: 487px )
     .footer
         &__title
@@ -316,11 +322,19 @@
 @media screen and ( max-width: 425px )
     .control
         &__button
-            width: 100%
+            max-width: 100%
+    .types
+        margin-bottom: 0
+    .section
+        padding: 30px 0
+        &.projects
+            padding-bottom: 25rem
+        &.control
+            padding-bottom: 0
 @media screen and ( max-width: 375px )
     .hero 
         &__button
-            min-width: 21rem
+            max-width: 21rem
     .section
         &-title
             &__heading
@@ -339,15 +353,15 @@
         &__button
             padding: 1.285rem 7.785rem
         &__map
-            width: 20.28rem
+            max-width: 20.28rem
             height: 18.21rem
         &__wrap
             padding: 0
-            width: 22.07rem
+            max-width: 22.07rem
 @media screen and ( max-width: 320px )
     .hero 
         &__button
-            min-width: 19rem
+            max-width: 19rem
     .card
         &__title
             font-weight: normal
@@ -356,11 +370,5 @@
             min-height: 2.85rem
     .control
         &__form
-            width: 100%
-    .footer
-
-        &__button
-            padding: 1.285rem 7.785rem
-             
-
+            max-width: 100%
     
