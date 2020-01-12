@@ -1,4 +1,5 @@
-.modal-thanks
+.modal-thanks,
+.modal-error
     display: none
     position: fixed
     z-index: 199
@@ -20,3 +21,6 @@
         text-align: center
     &.modal--visible
         display: flex
+.modal-error
+    .thanks__title
+        color: #a00

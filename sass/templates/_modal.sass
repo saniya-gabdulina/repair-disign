@@ -23,7 +23,8 @@
         color: $light
         overflow-y: auto
         max-height: 95%
-        max-width: 95%
+        width: 95%
+        max-width: 506px
     &__close
         position: absolute
         right: 0
@@ -34,9 +35,14 @@
         border: none
         margin: 12px
         cursor: pointer
+        outline: none
+        transition: 0.3s
+        &:hover
+            transform: scale(1.1)
     &__title
         font-family: 'Yeseva One', cursive
         font-size: 1.357rem
+        max-width: 362px
         text-align: center
         font-weight: normal
         margin: 0

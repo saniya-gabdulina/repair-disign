@@ -15,7 +15,6 @@
     .card
         &__title
             font-size: 15px
-            min-height: 36px
         &__pricetag
             font-size: 1rem
             max-width: 228px
@@ -29,6 +28,9 @@
             max-width: 50.07rem
             height: 25.21rem
 @media screen and ( max-width: 992px )
+    .row
+        flex-direction: column
+        align-items: center
     .nav
        display: none
     .contacts
@@ -56,12 +58,38 @@
             display: block
             max-width: 22.86rem
             margin-bottom: 1.85rem
-    .section-title
+        &::after
+            display: none
+    .section
+        padding: 40px 0
+        &-title
+            flex-direction: column
+            display: block
+            font-weight: normal
         &__text
+            display: block
             max-width: 27.57rem
-            margin-right: 40px 
+            text-align: center
+            font-size: 1rem
+            margin-left: auto
+            margin-right: auto
+        &__heading
+            display: flex
+            flex-direction: column
+            align-items: center
+            font-size: 1.57rem
+            letter-spacing: -0.01rem            
+        &__description
+            font-size: 1rem
+            font-weight: normal
+        &__word
+            &::after
+                display: none
     .mobile-order-top
         order: 0
+    .types
+        &__card
+            margin-bottom: 5rem
 @media screen and ( max-width: 910px )
     .footer
         &__wrap
@@ -72,6 +100,7 @@
             transform: translate(0, -50%)
 @media screen and ( max-width: 870px )
     .container
+        width: 100%
         max-width: 100%
         padding-left: 17px
         padding-right: 17px
@@ -87,8 +116,6 @@
         &__map
             max-width: 50.07rem
             height: 25.21rem
-        .container
-            width: 100%
 @media screen and ( max-width: 840px )
     .card
         &__pricetag
@@ -96,19 +123,9 @@
             max-width: 13rem
             max-height: 2.8rem
             padding: 0.8rem 1.9rem
-    .section-title
-        &__text
-            max-width: 22.57rem
-            margin-right: 2.85rem 
     .mobile-order-top
         order: 0
 @media screen and ( max-width: 760px )
-    .row
-        flex-direction: column
-        align-items: center
-    .types
-        &__card
-            margin-bottom: 5rem
     .card
         &__text
             margin-left: 0
@@ -119,6 +136,7 @@
             margin-bottom: 2.78rem
         &__card
             margin-bottom: 5.7rem
+                
     .swiper
          &-slide
             &r
@@ -126,14 +144,26 @@
                     margin-top: 0
     .mobile-order-top
         order: -1
-    .col-50
-        max-width: 100%
+    .col
+        &-50
+            width: 100%
+            max-width: 100%
+        &-30
+            &:last-of-type
+                .design__card
+                    margin-bottom: 17px
+                .types__card
+                    margin-bottom: 4rem
+                .profile
+                    margin-bottom: 0
     .control
         background-color: $dark
         color: $light
         padding: 0
         &__section-title
-            padding-top: 60px
+            margin-top: -25.5rem
+        &__text
+            color: #fff
         &__form
             max-width: 50%
             flex-direction: column
@@ -158,9 +188,9 @@
     .footer
         position: relative
         background: none
-        background-color: $dark 
-        padding-top: 8rem
+        background-color: $dark
         &__wrap
+            margin-top: 0
             background-color: $dark
             order: 1
             max-width: 43.07rem   
@@ -169,7 +199,6 @@
             height: 25.21rem
             order: 2
         &__title
-            margin-top: 3rem
             &-text
                 margin-top: -1.09rem
                 line-height: 138.6%
@@ -182,6 +211,8 @@
         &__icon
             width: 39px
             height: 39px
+        &__policy
+            margin-right: 0
     .team
         background-color: $dark
         padding-bottom: 8rem
@@ -232,17 +263,16 @@
         &__scroll-down
             display: none
         &__content
-            max-width: 22.86rem
             margin-left: auto
             margin-right: auto
-            text-align: center
+            padding-bottom: 35px
         &__text
             font-size: 1.29rem
             margin-bottom: 2.28rem
         &__button
             display: block
             max-width: 22.86rem
-            margin-bottom: 2.85rem
+            margin-bottom: 26px
     .swiper
         &-slide
             margin-bottom: 36px
@@ -251,6 +281,19 @@
                     margin-top: 0
             &__value
                 margin-bottom: 0
+        &-pagination
+            left: 50% !important
+            transform: translateX(-50%)
+            &-bullet
+                width: 10px
+                height: 10px
+                margin: 0 9px
+        &-button
+            &-prev
+                left: calc(50% - 94px) !important
+            &-next
+                left: auto !important
+                right: calc(50% - 94px) !important
     .mobile-order-top
         order: -1
     .col-50
@@ -259,11 +302,7 @@
         &__form
             margin-left: 98px
             margin-right: 154px
-   
-@media screen and ( max-height: 520px )
-    .hero
-        &__scroll-down
-            display: none 
+
 @media screen and ( max-width: 520px )
     .hero
         &__scroll-down
@@ -271,28 +310,6 @@
     .col
         &-50
             max-width: 100%
-    .section
-        &-title 
-            display: block
-            font-weight: normal
-            &__heading
-                display: flex
-                flex-direction: column
-                align-items: center
-                font-size: 1.57rem
-                letter-spacing: -0.01rem
-            &__text
-                display: block
-                text-align: center
-                font-size: 1rem
-                margin-left: auto
-                margin-right: auto
-            &__description
-                font-size: 1rem
-                font-weight: normal
-            &__word
-                &::after
-                    display: none
     .control
         &__form
             max-width: 100%
@@ -305,8 +322,8 @@
             max-width: 100%
         &__input
             border-bottom: 1px solid $secondary
-        &-group
-            flex-basis: 100%
+            &-group
+                flex-basis: 100%
         &__wrap
             padding: 0
             max-width: 24.07rem
@@ -318,8 +335,11 @@
     .footer
         &__title
             &-text
-                max-width: 22.64rem
+                // max-width: 22.64rem
 @media screen and ( max-width: 425px )
+    .hero
+        &__button
+            max-width: 100%
     .control
         &__button
             max-width: 100%
@@ -327,14 +347,22 @@
         margin-bottom: 0
     .section
         padding: 30px 0
+        &-title
+            &__description
+                max-width: 100%
         &.projects
             padding-bottom: 25rem
         &.control
             padding-bottom: 0
+    .card
+        &__title
+            font-weight: normal
+        &__pricetag
+            min-width: 13.6rem
+            min-height: 2.85rem
+        &__text
+            max-width: 19.38rem
 @media screen and ( max-width: 375px )
-    .hero 
-        &__button
-            max-width: 21rem
     .section
         &-title
             &__heading
@@ -342,12 +370,6 @@
             &__description
                 font-size: 1rem
                 font-weight: normal
-    .card
-        &__title
-            font-weight: normal
-        &__pricetag
-            min-width: 13.6rem
-            min-height: 2.85rem
 @media screen and ( max-width: 360px )
     .footer
         &__button
@@ -370,5 +392,4 @@
             min-height: 2.85rem
     .control
         &__form
-            max-width: 100%
-    
+            max-width: 100% 

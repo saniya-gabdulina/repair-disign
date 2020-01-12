@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="ccs/style.css">
     <link rel="icon" href="img/favicon.png" sizes="32x32" >
     <title>Repair Design</title>
 </head>
@@ -15,14 +14,14 @@
     <header class="header">
         <div class="container">
             <div class="menu">
-                <div class="logo menu__logo wow fadeInRight" data-wow-delay="0.3s">Repair Design Project</div>
+                <a href="#" class="logo menu__logo wow fadeInRight" data-wow-delay="0.3s">Repair Design Project</a>
                 <nav class="nav menu__nav">
-                    <a href="#" class="nav__item">Главная</a>
-                    <a href="#" class="nav__item">Проекты</a>
+                    <a href="#home" class="nav__item">Главная</a>
+                    <a href="#projects" class="nav__item">Проекты</a>
                     <a href="#" class="nav__item">Замер</a>
-                    <a href="#" class="nav__item">Команда</a>
+                    <a href="#team" class="nav__item">Команда</a>
                     <a href="#" class="nav__item">Отзывы</a>
-                    <a href="#" class="nav__item">Контакты</a>
+                    <a href="#contacts" class="nav__item">Контакты</a>
                 </nav>
                 <div class="contacts menu__contacts">
                     <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
@@ -36,7 +35,7 @@
         <!-- /.container -->
     </header>
     <main>
-        <section class="hero">
+        <section class="hero" id="home">
             <div class="instagram hero__instagram">
                 <a href="#" class="instagram__link">Instagram</a>
             </div>
@@ -56,10 +55,10 @@
                 <!-- /.hero__content -->
             </div>
             <!-- /.container -->
-            <a href="#" class="hero__scroll-down">листайте вниз</a>
+            <a href="#projects" class="hero__scroll-down">листайте вниз</a>
         </section>
         <!-- /.hero -->
-        <section class="section section--dark projects">
+        <section class="section section--dark projects" id="projects">
             <div class="container">
                 <div class="section-title section-title--left">
                     <h2 class="section-title__heading section-title__heading--primary">Завершенные <span
@@ -78,70 +77,76 @@
                             <div class="swiper-wrapper swiper-no-swiping">
                                 <!-- Slides -->
                                 <div class="swiper-slide">
-                                    <div class="swiper-slide__text">
-                                        <h3 class="swiper-slide__heading">Город:</h3>
-                                        <span class="swiper-slide__value">Ростов-на-Дону <br>ЖК Адмирал</span>
+                                    <div class="swiper-slide__inner">
+                                        <div class="swiper-slide__text">
+                                            <h3 class="swiper-slide__heading">Город:</h3>
+                                            <span class="swiper-slide__value">Ростов-на-Дону <br>ЖК Адмирал</span>
+                                        </div>
+                                        <!-- /.swiper-slide__text -->
+                                        <div class="swiper-slide__text">
+                                            <h3 class="swiper-slide__heading">Площадь</h3>
+                                            <span class="swiper-slide__value">81 м2</span>
+                                        </div>
+                                        <!-- /.swiper-slide__text -->
+                                        <div class="swiper-slide__text">
+                                            <h3 class="swiper-slide__heading">Срок ремонта:</h3>
+                                            <span class="swiper-slide__value">3,5 месяца</span>
+                                        </div>
+                                        <!-- /.swiper-slide__text -->
+                                        <div class="swiper-slide__text">
+                                            <h3 class="swiper-slide__heading">Стоимость:</h3>
+                                            <span class="swiper-slide__value">По запросу</span>
+                                        </div>
+                                        <!-- /.swiper-slide__text -->
                                     </div>
-                                    <!-- /.swiper-slide__text -->
-                                    <div class="swiper-slide__text">
-                                        <h3 class="swiper-slide__heading">Площадь</h3>
-                                        <span class="swiper-slide__value">81 м2</span>
-                                    </div>
-                                    <!-- /.swiper-slide__text -->
-                                    <div class="swiper-slide__text">
-                                        <h3 class="swiper-slide__heading">Срок ремонта:</h3>
-                                        <span class="swiper-slide__value">3,5 месяца</span>
-                                    </div>
-                                    <!-- /.swiper-slide__text -->
-                                    <div class="swiper-slide__text">
-                                        <h3 class="swiper-slide__heading">Стоимость:</h3>
-                                        <span class="swiper-slide__value">По запросу</span>
-                                    </div>
-                                    <!-- /.swiper-slide__text -->
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="swiper-slide__text">
-                                        <h3 class="swiper-slide__heading">Город:</h3>
-                                        <span class="swiper-slide__value">Ростов-на-Дону <br>ЖК Адмирал</span>
+                                    <div class="swiper-slide__inner">
+                                        <div class="swiper-slide__text">
+                                            <h3 class="swiper-slide__heading">Город:</h3>
+                                            <span class="swiper-slide__value">Ростов-на-Дону <br>ЖК Адмирал</span>
+                                        </div>
+                                        <!-- /.swiper-slide__text -->
+                                        <div class="swiper-slide__text">
+                                            <h3 class="swiper-slide__heading">Площадь</h3>
+                                            <span class="swiper-slide__value">81 м2</span>
+                                        </div>
+                                        <!-- /.swiper-slide__text -->
+                                        <div class="swiper-slide__text">
+                                            <h3 class="swiper-slide__heading">Срок ремонта:</h3>
+                                            <span class="swiper-slide__value">3,5 месяца</span>
+                                        </div>
+                                        <!-- /.swiper-slide__text -->
+                                        <div class="swiper-slide__text">
+                                            <h3 class="swiper-slide__heading">Стоимость:</h3>
+                                            <span class="swiper-slide__value">По запросу</span>
+                                        </div>
+                                        <!-- /.swiper-slide__text -->
                                     </div>
-                                    <!-- /.swiper-slide__text -->
-                                    <div class="swiper-slide__text">
-                                        <h3 class="swiper-slide__heading">Площадь</h3>
-                                        <span class="swiper-slide__value">81 м2</span>
-                                    </div>
-                                    <!-- /.swiper-slide__text -->
-                                    <div class="swiper-slide__text">
-                                        <h3 class="swiper-slide__heading">Срок ремонта:</h3>
-                                        <span class="swiper-slide__value">3,5 месяца</span>
-                                    </div>
-                                    <!-- /.swiper-slide__text -->
-                                    <div class="swiper-slide__text">
-                                        <h3 class="swiper-slide__heading">Стоимость:</h3>
-                                        <span class="swiper-slide__value">По запросу</span>
-                                    </div>
-                                    <!-- /.swiper-slide__text -->
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="swiper-slide__text">
-                                        <h3 class="swiper-slide__heading">Город:</h3>
-                                        <span class="swiper-slide__value">Ростов-на-Дону <br>ЖК Адмирал</span>
+                                    <div class="swiper-slide__inner">
+                                        <div class="swiper-slide__text">
+                                            <h3 class="swiper-slide__heading">Город:</h3>
+                                            <span class="swiper-slide__value">Ростов-на-Дону <br>ЖК Адмирал</span>
+                                        </div>
+                                        <!-- /.swiper-slide__text -->
+                                        <div class="swiper-slide__text">
+                                            <h3 class="swiper-slide__heading">Площадь</h3>
+                                            <span class="swiper-slide__value">81 м2</span>
+                                        </div>
+                                        <!-- /.swiper-slide__text -->
+                                        <div class="swiper-slide__text">
+                                            <h3 class="swiper-slide__heading">Срок ремонта:</h3>
+                                            <span class="swiper-slide__value">3,5 месяца</span>
+                                        </div>
+                                        <!-- /.swiper-slide__text -->
+                                        <div class="swiper-slide__text">
+                                            <h3 class="swiper-slide__heading">Стоимость:</h3>
+                                            <span class="swiper-slide__value">По запросу</span>
+                                        </div>
+                                        <!-- /.swiper-slide__text -->
                                     </div>
-                                    <!-- /.swiper-slide__text -->
-                                    <div class="swiper-slide__text">
-                                        <h3 class="swiper-slide__heading">Площадь</h3>
-                                        <span class="swiper-slide__value">81 м2</span>
-                                    </div>
-                                    <!-- /.swiper-slide__text -->
-                                    <div class="swiper-slide__text">
-                                        <h3 class="swiper-slide__heading">Срок ремонта:</h3>
-                                        <span class="swiper-slide__value">3,5 месяца</span>
-                                    </div>
-                                    <!-- /.swiper-slide__text -->
-                                    <div class="swiper-slide__text">
-                                        <h3 class="swiper-slide__heading">Стоимость:</h3>
-                                        <span class="swiper-slide__value">По запросу</span>
-                                    </div>
-                                    <!-- /.swiper-slide__text -->
                                 </div>
 
                             </div>
@@ -576,11 +581,11 @@
                 </form>
             </div>
 
-            <p class="footer__title footer__title-text">
+            <p class="footer__title footer__title-text" id="contacts">
                 Ростов на дону, Торговый центр Plaza Прямой телефон +7 (999) 768 32 99
             </p>
             <div class="footer__nav">
-                <a href="mailto: saniya@mail.ru" class="footer__icon footer__icon-email"></a>
+                <a href="mailto:saniya@mail.ru" class="footer__icon footer__icon-email"></a>
                 <a href="https://www.instagram.com/?hl=ru" class="footer__icon footer__icon-instagram"></a>
             </div>
             <div class="map footer__map "></div>
@@ -589,14 +594,14 @@
         <div class="footer__menu">
             <div class="container">
                 <div class="menu">
-                    <div class="logo menu__logo wow fadeInRight">Repair Design Project</div>
+                    <a href="#" class="logo menu__logo wow fadeInRight">Repair Design Project</a>
                     <nav class="nav menu__nav">
-                        <a href="#" class="nav__item">Главная</a>
-                        <a href="#" class="nav__item">Проекты</a>
+                        <a href="#home" class="nav__item">Главная</a>
+                        <a href="#projects" class="nav__item">Проекты</a>
                         <a href="#" class="nav__item">Замер</a>
-                        <a href="#" class="nav__item">Команда</a>
+                        <a href="#team" class="nav__item">Команда</a>
                         <a href="#" class="nav__item">Отзывы</a>
-                        <a href="#" class="nav__item">Контакты</a>
+                        <a href="#contacts" class="nav__item">Контакты</a>
                     </nav>
                     <div class="contacts menu__contacts">
                         <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
@@ -643,6 +648,15 @@
             <div class="thanks__content">
                 <h3 class="thanks__title">Спасибо за заявку</h3>
                 <p class="thanks__text">Наш менеджер перезвонит Вам в течении 15 минут</p>
+            </div>
+            <!-- /.hero__content -->
+        </div>
+    </div>
+    <div class="modal-error">
+        <div class="container">
+            <div class="thanks__content">
+                <h3 class="thanks__title">Произошла ошибка</h3>
+                <p class="thanks__text">Попробуйте повторить позднее</p>
             </div>
             <!-- /.hero__content -->
         </div>

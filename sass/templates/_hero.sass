@@ -5,8 +5,11 @@
     justify-content: center
     padding-top: 100px
     background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
-    height: 100vh
+    min-height: 100vh
     color: $light
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
+        display: block
+        position: relative
     &::before
         content: ''
         position: absolute
@@ -28,6 +31,10 @@
         position: relative
         max-width: 47.85rem
         margin-left: 4.28rem
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) 
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
     &__title
             margin-bottom: 1rem
             line-height: 2
@@ -77,8 +84,9 @@
     align-items: center
     background-color: $dark
     &__link
-        display: flex
-        align-items: center
+        position: relative
+        display: block
+        text-align: center
         text-transform: uppercase
         text-decoration: none
         color: $primary
@@ -86,11 +94,17 @@
         line-height: 0.8
         font-size: 1.1rem
         &::after
+            position: absolute
+            display: block
             content: ''
             width: 50px
             height: 1px
+            top: 50%
+            left: 100%
+            transform: translateY(-50%)
             background-color: $primary
             margin-left: 8px
+            
 .title
     margin: 0
     font-family: 'Yeseva One', cursive

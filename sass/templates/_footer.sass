@@ -3,8 +3,11 @@
     padding-top: 3rem
     .container
         display: flex
+        align-items: center
         flex-direction: column
-        width: 85%
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+            display: block
+            text-align: center
     &__wrap
         background-color: $black
         max-width: 63.07rem 

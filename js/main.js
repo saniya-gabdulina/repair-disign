@@ -19,15 +19,17 @@ $(document).ready(function () {
     var modal = $('.modal'),
         modalBtn = $('[data-toggle=modal]'),
         closeBtn = $('.modal__close');
-  
+
     modalBtn.click(function () {
         modal.toggleClass('modal--visible');
+        $('body').addClass('fixed');
     });
     closeBtn.on('click', function () {
         modal.toggleClass('modal--visible');
-    });   
+        $('body').removeClass('fixed');
+    });
 
-    var mySwiper = new Swiper ('.swiper-container', {
+    var mySwiper = new Swiper('.swiper-container', {
         loop: true,
         pagination: {
             el: '.swiper-pagination',
@@ -36,21 +38,22 @@ $(document).ready(function () {
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-          },
-    })
+        },
+    });
 
     var next = $('.swiper-button-next');
     var prev = $('.swiper-button-prev');
     var bullets = $('.swiper-pagination');
 
-    next.css('left', prev.width() + 10 + bullets.width() + 10)
-    bullets.css('left', prev.width() + 10)
+    next.css('left', prev.width() + 10 + bullets.width() + 10);
+    bullets.css('left', prev.width() + 10);
 
     new WOW().init();
-    
+
     function lazyLoad() {
         let img = document.querySelectorAll('.lazyImg');
-        img.forEach(item => {
+        for (let i = 0; i < img.length; i++) {
+            let item = img[i];
             $(document).scroll(function () {
                 if (($(document).scrollTop() + $(window).height()) > $(item).offset().top) {
                     let imgSrc = item.dataset.src;
@@ -63,11 +66,11 @@ $(document).ready(function () {
                     item.src = imgSrc;
                 }
             })
-        })
+        }
     };
     lazyLoad();
 
-    $(document).scroll(function() {
+    $(document).scroll(function () {
         // console.log($('.types .section-title__heading').offset());
         if (($(document).scrollTop() + $(window).height()) > $('.types .section-title__heading').offset().top) {
             $('.types .section-title__heading').addClass('myAnimation');
@@ -142,7 +145,7 @@ $(document).ready(function () {
     //         userPhone: "Телефон обязателен",
     //         }
     //       });
-        
+
     //     $('.control__form').validate({
     //         errorClass: "invalid",
     //         errorElement: "div",
@@ -182,7 +185,11 @@ $(document).ready(function () {
                     minlength: 2,
                     maxlength: 10
                 },
-                userPhone: "required",
+                userPhone: {
+                    required: true,
+                    minlength: 17,
+                    maxlength: 17
+                },
                 userQuestion: {
                     required: true,
                     minlength: 20,
@@ -194,7 +201,7 @@ $(document).ready(function () {
                     email: true
                 }
             },
-            errorElement: "div",
+            errorElement: "span",
             messages: {
                 userName: {
                     required: "Имя обязательно",
@@ -219,52 +226,59 @@ $(document).ready(function () {
                 }
                 error.insertAfter($(element));
             },
-            submitHandler: function(form) {
-                    $.ajax({
-                        type: "POST",
-                        url: "http://gabdulinasm.ru/repair-design/send.php",
-                        data: $(form).serialize(),
-                        success: function (response) {
-                            $('.modal-thanks').addClass('modal--visible');
-                            $(form)[0].reset();
-                            modal.removeClass('modal--visible');
-                            setTimeout(function() {
-                                $('.modal-thanks').removeClass('modal--visible');
-                            }, 2000); //убирает окно благодарности через 2000мс (2 секунды) 
-                        }
-                    });
-                }
+            submitHandler: function (form) {
+                $.ajax({
+                    type: "POST",
+                    url: "http://gabdulinasm.ru/repair-design/send.php",
+                    data: $(form).serialize(),
+                    success: function (response) {
+                        $('.modal-thanks').addClass('modal--visible');
+                        $(form)[0].reset();
+                        modal.removeClass('modal--visible');
+                        setTimeout(function () {
+                            $('.modal-thanks').removeClass('modal--visible');
+                        }, 2000); //убирает окно благодарности через 2000мс (2 секунды) 
+                    },
+                    error: function (response) {
+                        $('.modal-error').addClass('modal--visible');
+                        modal.removeClass('modal--visible');
+                        setTimeout(function () {
+                            $('.modal-error').removeClass('modal--visible');
+                        }, 3000); //убирает окно благодарности через 2000мс (2 секунды) 
+                    }
+                });
+            }
         });
     }
     validateForm('.modal__form');
     validateForm('.control__form');
-    validateForm('.footer__form');    
+    validateForm('.footer__form');
 
     // Маска для телефона
-    $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) ___-__-__"});
-    
-     var isAddedMap = false;
+    $('[type=tel]').mask('+7(000) 00-00-000', { placeholder: "+7 (___) ___-__-__" });
 
-        $(window).scroll(function() {
-            var el = $('.map');
-            if ($(this).scrollTop() > el.offset().top - 800) {
-                if(isAddedMap) return;
-                isAddedMap = true;
-                var script = document.createElement('script');
-                script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3640a6472e0817484e41c82f3bab31623c39b2a8835bc6ba7b8029c7367f5a4f&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false";
-                el.append(script);
-            };
-        });
-    
+    var isAddedMap = false;
+
+    $(window).scroll(function () {
+        var el = $('.map');
+        if ($(this).scrollTop() > el.offset().top - 800) {
+            if (isAddedMap) return;
+            isAddedMap = true;
+            var script = document.createElement('script');
+            script.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3640a6472e0817484e41c82f3bab31623c39b2a8835bc6ba7b8029c7367f5a4f&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false";
+            el.append(script);
+        };
+    });
+
     var player;
-    $('.video__play').on('click',function onYouTubeIframeAPIReady() {
+    $('.video__play').on('click', function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          height: '465',
-          width: '100%',
-          videoId: 'o6oZpqxowis',
-          events: {
-            'onReady': videoPlay,
-          }
+            height: '465',
+            width: '100%',
+            videoId: 'o6oZpqxowis',
+            events: {
+                'onReady': videoPlay,
+            }
         });
         $('.video__play').fadeOut(100);
     })
