@@ -91,6 +91,7 @@ const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
 const tinypng = require('gulp-tinypng-compress');
+const babel = require('gulp-babel');
 
 
 // Static server
@@ -140,6 +141,7 @@ function buildCSS(done) {
 function buildJS(done) {
     src([
         'js/jquery-3.4.1.min.js',
+        'js/jquery-migrate-1.4.1.min.js',
         'js/swiper.min.js',
         'js/wow.min.js',
         'js/jquery.validate.min.js',
@@ -147,6 +149,7 @@ function buildJS(done) {
         'js/main.js'
     ])
         .pipe(concat('script.js'))
+        // .pipe(babel())
         .pipe(minify({
             ext: {
                 min: '.min.js'

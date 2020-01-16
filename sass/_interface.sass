@@ -4,6 +4,7 @@
     text-transform: uppercase
     font-size: 0.93rem
     outline: none
+    transition: 0.3s
     &:hover
         cursor: pointer
     &--primary
@@ -16,6 +17,9 @@
         border: 1px solid $light
         background-color: transparent
         color: $light
+        &:hover
+            color: $primary
+            border-color: $primary
 .label
     font-size: 1.07rem
     &--light
@@ -32,19 +36,26 @@
         color: $light
     &-group
         position: relative
-   
+        .invalid
+            color: tomato
+            display: block
+            width: 100%
 .policy
     &__checkbox
         opacity: 0
-        display: none
+        visibility: hidden
+        height: 0
+        width: 0
         &:checked +
             .policy__label
                 &::before
                     background: $primary url('../img/check.svg') no-repeat center / 0.8rem
     &__label
+        position: relative
         display: flex
         align-items: center
         font-size: 1.142rem
+        flex-wrap: wrap
         &::before
             content: ''
             width: 18px
@@ -58,10 +69,18 @@
 label
     &.invalid
         color: tomato
+        display: block
+        width: 100%
+.invalid
+    color: tomato
+    width: 100%
+span.invalid
+    position: absolute
+    bottom: 0
+    transform: translateY(100%)
 input
     &.invalid
         border-bottom: 1px solid tomato
 em.invalid    
     position: absolute
     top: 60px
-    

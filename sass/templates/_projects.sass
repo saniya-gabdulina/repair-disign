@@ -1,9 +1,7 @@
 .projects
-    padding-bottom: 20rem
+    padding-bottom: 26rem
 .swiper
     &-slide
-        display: flex
-        flex-wrap: wrap
         padding-bottom: 2rem
         margin-bottom: 36px
         &r
@@ -20,7 +18,11 @@
             color: $primary
             text-transform: uppercase
             font-weight: normal
-            margin-bottom: 0.64rem 
+            margin-bottom: 0.64rem
+        &__inner
+            display: flex
+            flex-wrap: wrap
+            max-width: 378px
     &-pagination
         &-bullet
             background-color: rgba($light, 0.3 )
