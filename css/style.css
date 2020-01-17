@@ -377,7 +377,8 @@ template {
     .input-group .invalid {
       color: tomato;
       display: block;
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 0.5rem; }
 
 .policy__checkbox {
   opacity: 0;
@@ -394,7 +395,8 @@ template {
   -webkit-box-align: center;
   align-items: center;
   font-size: 1.142rem;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding: 0.5rem 0; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -417,6 +419,7 @@ label.invalid {
   width: 100%; }
 
 span.invalid {
+  font-size: 14px;
   position: absolute;
   bottom: 0;
   -webkit-transform: translateY(100%);
@@ -708,8 +711,6 @@ img {
 
 .control__video {
   position: relative;
-  display: -webkit-box;
-  display: flex;
   height: 0;
   padding-top: 53.12%;
   background: #131313 url("../img/video-mask.jpg") center no-repeat;
@@ -1028,6 +1029,12 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+    .footer__menu .menu {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      width: 100%; }
   .footer__nav {
     display: -webkit-box;
     display: flex;
@@ -1065,6 +1072,11 @@ img {
     order: 4; }
 
 .projects {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
   padding-bottom: 26rem; }
 
 .swiper-slide {

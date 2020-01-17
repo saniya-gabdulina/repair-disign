@@ -171,7 +171,7 @@ $(document).ready(function () {
     
 
     // Маска для телефона
-    $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "+7 (___) ___-__-__"});
+    $('[type=tel]').mask('+7(000) 00-00-000', {placeholder: "Ваш номер телефона"});
     
     var isAddedMap = false;
 

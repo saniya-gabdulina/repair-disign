@@ -77,102 +77,7 @@ $(document).ready(function () {
         }
     })
 
-    // $('.modal__form').validate({
-    //     errorClass: "invalid",
-    //     errorElement: "em",
-    //     rules: {
-    //         // строчное правило
-    //         userName: {
-    //             required: true,
-    //             minlength: 2,
-    //             maxlength: 15,
-    //         },
-    //         userPhone: "required",
-    //         // правило-объект
-    //         userEmail: {
-    //           required: true,
-    //           email: true
-    //         }
-    //     }, // сообщения при выводе ошибки
-    //     messages: {
-    //         userName: {
-    //             required: "Имя обязательно",
-    //             minlength: "Имя не короче 2 букв",
-    //             maxlength: "Имя не длиннее 15 букв",
-    //         }, 
-    //         userPhone: "Телефон обязателен",
-    //         userEmail: {
-    //             required: "Обязательно укажите email",
-    //             email: "Введите в формате: name@domain.com"
-    //         }
-    //     },
-    //     submitHandler: function(form) {
-    //         $.ajax({
-    //             type: "POST",
-    //             url: "send.php",
-    //             data: $(form).serialize(),
-    //             success: function (response) {
-    //                 alert('Форма отправлена, мы свяжемся с вами через 10 минут');
-    //                 $(form)[0].reset();
-    //                 modal.removeClass('modal--visible');
-    //             }
-    //         });
-    //     }
-    // });
-    // $('.footer__form').validate({
-    //     errorClass: "invalid",
-    //     errorElement: "div",
-    //     rules: {
-    //         // одно строчное правило
-    //         userName: {
-    //         required: true,
-    //         minlength: 2,
-    //         maxlength: 15
-    //         },
-    //         userPhone: "required",
-    //         // правила-объект (блок правил)
-    //         userEmail: {
-    //             required: true,
-    //             email: true
-    //         }
-    //     }, /* сообщения при выводе ошибки */
-    //     messages: {
-    //         userName: {
-    //             required: "Имя обязательно",
-    //             minlength: "Имя не короче 2 букв",
-    //             maxlength: "Имя не длиннее 15 букв"
-    //         },
-    //         userPhone: "Телефон обязателен",
-    //         }
-    //       });
-
-    //     $('.control__form').validate({
-    //         errorClass: "invalid",
-    //         errorElement: "div",
-    //         rules: {
-    //           // одно строчное правило
-    //             userName: {
-    //             required: true,
-    //             minlength: 2,
-    //             maxlength: 15
-    //             },
-    //             userPhone: "required",
-    //             // правила-объект (блок правил)
-    //             userEmail: {
-    //                 required: true,
-    //                 email: true
-    //             }
-    //         }, /* сообщения при выводе ошибки */
-    //         messages: {
-    //             userName: {
-    //                 required: "Имя обязательно",
-    //                 minlength: "Имя не короче 2 букв",
-    //                 maxlength: "Имя не длиннее 15 букв"
-    //             },
-    //             userPhone: "Телефон обязателен",
-    //         }
-    //       });
-
+    
 
     function validateForm(form) {
         $(form).validate({
@@ -255,7 +160,7 @@ $(document).ready(function () {
     validateForm('.footer__form');
 
     // Маска для телефона
-    $('[type=tel]').mask('+7(000) 00-00-000', { placeholder: "+7 (___) ___-__-__" });
+    $('[type=tel]').mask('+7(000) 00-00-000', { placeholder: "Ваш номер телефона:" });
 
     var isAddedMap = false;
 
