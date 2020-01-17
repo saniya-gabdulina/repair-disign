@@ -822,12 +822,11 @@ img {
   cursor: pointer;
   z-index: 1; }
 
-.types {
-  margin-bottom: 60px; }
-  .types__section-title {
-    margin-bottom: 2rem; }
-    .types__section-title__heading {
-      font-size: 1.42rem; }
+.types__heading {
+  font-size: 1.42rem; }
+
+.types__section-title {
+  margin-bottom: 2rem; }
 
 .card {
   position: relative; }
@@ -838,7 +837,7 @@ img {
     position: relative;
     max-width: 19.38rem;
     margin: 0 auto;
-    margin-top: -9.3rem;
+    margin-top: -12.3rem;
     padding: 1.79rem 2.14rem;
     background-color: #fff;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
@@ -1247,7 +1246,7 @@ img {
     -webkit-box-direction: normal;
     flex-direction: column;
     margin: auto;
-    margin-bottom: 15rem;
+    margin-bottom: 20rem;
     max-width: 568px;
     font-size: 20px;
     line-height: 34px;
@@ -1377,7 +1376,10 @@ img {
       display: block;
       font-weight: normal;
       max-width: 444px;
-      margin: auto; }
+      margin: auto;
+      margin-bottom: 2rem; }
+      .section-title__description {
+        margin-bottom: 3rem; }
     .section__text {
       max-width: 27.57rem;
       text-align: center;
@@ -1411,6 +1413,8 @@ img {
   .col-50 {
     width: 100%;
     max-width: 100%; }
+  .col-30 {
+    margin-bottom: 5rem; }
   .control__section-title {
     margin-bottom: 2.214rem;
     margin-top: -22.5rem; } }
