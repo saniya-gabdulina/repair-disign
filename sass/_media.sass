@@ -6,9 +6,14 @@
             margin-right: 1rem
 @media screen and ( max-width: 1090px )
     .nav
-       display: none
+        &__item
+            font-size: 12px
     .contacts
+        &__button
+            width: 142px
+            height: 26px
         &__phone
+            font-size: 10px
             margin-right: 2.5rem
             color: $primary
             text-decoration: none
@@ -27,7 +32,7 @@
         &__map
             max-width: 50.07rem
             height: 25.21rem
-@media screen and ( max-width: 992px )
+@media screen and ( max-width: 990px )
     .container
         width: 100%
         max-width: 100%
@@ -38,12 +43,16 @@
         flex-direction: column
         align-items: center
     .nav
-       display: none
+        &__item
+            font-size: 14px
+    .logo
+        font-size: 8px
     .contacts
         &__phone
             margin-right: 0
             color: $light
             text-decoration: none
+            font-size: 14px
         &__button
             display: none
     .title
@@ -121,6 +130,13 @@
         &__section-title 
             margin-bottom: 2.214rem
             margin-top: -22.5rem
+    .team
+        .section-title__description
+            margin-bottom: 6rem
+        .col-30
+            &:last-of-type
+                .profile
+                    margin-bottom: 0
 @media screen and ( max-width: 910px )
     .footer
         &__wrap
@@ -164,6 +180,8 @@
             padding: 0.8rem 1.9rem
     
 @media screen and ( max-width: 760px )
+    .nav
+        display: none
     .card
         &__text
             margin-left: 0
@@ -192,23 +210,29 @@
             max-width: 50%
             flex-direction: column
         &__input-group
-            margin-bottom: 63px
+            margin-bottom: 49px
         &__button
             max-width: 340px
             height: 51px
             transform: translatey(44px)
+            margin-bottom: -24px
         &__policy
             max-width: 285.62px
             height: 18px
-            transform: translatey(-103px)
+            transform: translatey(-82px)
             margin-top: 0
             &-label
                 justify-content: flex-start
         .input
+            border-bottom: 1px solid rgba(254, 254, 254, 0.7)
             &::placeholder
                 color: $light
+        span.invalid
+            transform: translateY(50%)
     .label
         color: $secondary
+    .types
+        margin-top: 34px
     .footer
         position: relative
         background: none
@@ -239,7 +263,7 @@
             margin-right: 0
     .team
         background-color: $dark
-        padding-bottom: 8rem
+        padding-bottom: 0rem
         &__section
             &-title
                 max-width: 100%
@@ -253,6 +277,11 @@
             transform: translate(-50%, -50%)
         &__story
             display: none
+    .policy
+        &__label
+            margin-top: 10px
+    .col-30
+        margin-bottom: 0
    
 @media screen and ( max-width: 680px )
     .footer
@@ -306,6 +335,8 @@
                     margin-top: 0
             &__value
                 margin-bottom: 0
+            &__heading
+                font-size: 14px
         &-pagination
             left: 50% !important
             transform: translateX(-50%)
@@ -325,8 +356,7 @@
     
     .control
         &__form
-            margin-left: 98px
-            margin-right: 154px
+            margin: auto
 
 @media screen and ( max-width: 520px )
     .hero
@@ -341,7 +371,7 @@
             margin: auto
             justify-content: center
         &__button
-            max-width: 90% 
+            max-width: 100% 
     .footer
         &__button
             max-width: 100%
@@ -349,6 +379,8 @@
             border-bottom: 1px solid $secondary
             &-group
                 flex-basis: 100%
+                &:nth-child(3)
+                    margin-bottom: 20px
         &__wrap
             padding: 0
             max-width: 24.07rem
@@ -397,6 +429,15 @@
             &__description
                 font-size: 1rem
                 font-weight: normal
+    .modal
+        &__title
+            font-size: 1rem
+        .policy__label
+            font-size: 12px
+        &__input-group
+            margin-bottom: 2rem
+            &:last-of-type
+                margin-bottom: 1rem
 @media screen and ( max-width: 360px )
     .footer
         &__button
@@ -420,3 +461,4 @@
     .control
         &__form
             max-width: 100% 
+    
